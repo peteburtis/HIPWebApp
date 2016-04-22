@@ -98,8 +98,8 @@ to the delegate.</p>
 <p>Simplest possible web app:</p>
 
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SimplestExampleWebApp</span><span class="p">:</span> <span class="kt">WebApp</span> <span class="p">{</span>
-    <span class="k">var</span> <span class="nv">appIdentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"google"</span> <span class="p">}</span>
-    <span class="k">var</span> <span class="nv">initialURL</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://google.com"</span><span class="p">)</span><span class="o">!</span> <span class="p">}</span>
+    <span class="k">let</span> <span class="nv">appIdentifier</span> <span class="o">=</span> <span class="s">"google"</span>
+    <span class="k">let</span> <span class="nv">initialURL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://google.com"</span><span class="p">)</span><span class="o">!</span>
 <span class="p">}</span>
 </code></pre>
 
