@@ -1,5 +1,7 @@
 # HIPWebApp: WKWebView design patterns
 
+[Docs (you may already be here)](http://hipmunk.github.io/HIPWebApp/)
+
 At Hipmunk, we've been experimenting with ways to integrate web-based views into our app without providing a
 bad experience for users. To us, that means tight integration between the code running in the web view and the
 native parts of our app.
