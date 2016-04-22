@@ -1,5 +1,5 @@
 //
-//  HIPNavigationDelegateExampleWebApp.swift
+//  NavigationDelegateExampleWebApp.swift
 //  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
@@ -11,24 +11,24 @@ import WebKit
 import HIPWebApp
 
 
-class HIPNavigationDelegateExampleWebApp: NSObject, WebApp {  // WKNavigationDelegate requires NSObject
+class NavigationDelegateExampleWebApp: NSObject, WebApp {  // WKNavigationDelegate requires NSObject
     var appIdentifier: String { return "navigation-delegate" }
 
     var initialURL: NSURL {
-        let bundle = NSBundle(forClass: HIPNavigationDelegateExampleWebApp.self)
-        let htmlPath = bundle.pathForResource("HIPNavigationDelegateExampleWebApp", ofType: "html")!
+        let bundle = NSBundle(forClass: NavigationDelegateExampleWebApp.self)
+        let htmlPath = bundle.pathForResource("NavigationDelegateExampleWebApp", ofType: "html")!
         return NSURL(fileURLWithPath: htmlPath)
     }
 }
 
 
-extension HIPNavigationDelegateExampleWebApp: WebAppNavigating {
+extension NavigationDelegateExampleWebApp: WebAppNavigating {
     func getWebViewNavigationDelegate() -> WKNavigationDelegate {
         return self
     }
 }
 
-extension HIPNavigationDelegateExampleWebApp: WKNavigationDelegate {
+extension NavigationDelegateExampleWebApp: WKNavigationDelegate {
     func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
         if navigationAction.request.URL?.host?.containsString("slashdot") == true {
             NSLog("No slashdot for you!")

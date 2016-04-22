@@ -12,28 +12,28 @@ import HIPWebApp
 
 
 /// Forward any WKWebView messages as delegate methods
-protocol HIPMessageHandlingExampleWebAppDelegate: class {
+protocol MessageHandlingExampleWebAppDelegate: class {
     func buttonWasClicked(data: AnyObject?)
 }
 
 
-class HIPMessageHandlingExampleWebApp: WebApp {
+class MessageHandlingExampleWebApp: WebApp {
     /// Included in log messages
     var appIdentifier: String { return "message-handling" }
 
     var initialURL: NSURL {
-        let bundle = NSBundle(forClass: HIPMessageHandlingExampleWebApp.self)
-        let htmlPath = bundle.pathForResource("HIPMessageHandlingExampleWebApp", ofType: "html")!
+        let bundle = NSBundle(forClass: MessageHandlingExampleWebApp.self)
+        let htmlPath = bundle.pathForResource("MessageHandlingExampleWebApp", ofType: "html")!
         return NSURL(fileURLWithPath: htmlPath)
     }
 
     weak var webView: WKWebView? = nil
-    weak var delegate: HIPMessageHandlingExampleWebAppDelegate?
+    weak var delegate: MessageHandlingExampleWebAppDelegate?
 }
 
 
 //MARK: External API
-extension HIPMessageHandlingExampleWebApp {
+extension MessageHandlingExampleWebApp {
     func setButtonColor(cssColorString: String) {
         webView?.evaluateJavaScript("window.containerAPI.changeButtonColor('\(cssColorString)');", completionHandler: nil)
     }
@@ -41,7 +41,7 @@ extension HIPMessageHandlingExampleWebApp {
 
 
 //MARK: Grab a reference to the web view
-extension HIPMessageHandlingExampleWebApp: WebAppWebViewReferencing {
+extension MessageHandlingExampleWebApp: WebAppWebViewReferencing {
     func willRunInWebView(webView: WKWebView) {
         self.webView = webView
     }
@@ -49,7 +49,7 @@ extension HIPMessageHandlingExampleWebApp: WebAppWebViewReferencing {
 
 
 //MARK: Handle WKWebView messages
-extension HIPMessageHandlingExampleWebApp: WebAppMessageHandling {
+extension MessageHandlingExampleWebApp: WebAppMessageHandling {
     var supportedMessageNames: [String] { return ["BUTTON_CLICKED"] }
 
     func handleMessage(name: String, _ body: AnyObject) -> Bool {

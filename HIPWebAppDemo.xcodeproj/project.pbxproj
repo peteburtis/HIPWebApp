@@ -13,24 +13,22 @@
 		F2311F1D1CB5853F004F0815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2311F1B1CB5853F004F0815 /* LaunchScreen.storyboard */; };
 		F295D0ED1CCA8CDE0097C30A /* HIPWebApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F295D0D81CCA8CDE0097C30A /* HIPWebApp.framework */; };
 		F295D0EE1CCA8CDE0097C30A /* HIPWebApp.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F295D0D81CCA8CDE0097C30A /* HIPWebApp.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		F295D0FF1CCA91120097C30A /* HIPSimplestExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D0FD1CCA91120097C30A /* HIPSimplestExampleWebApp.swift */; };
-		F295D1001CCA91120097C30A /* HIPSimplestExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D0FE1CCA91120097C30A /* HIPSimplestExampleWebAppViewController.swift */; };
-		F295D1041CCA91350097C30A /* HIPBasicLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1011CCA91350097C30A /* HIPBasicLogging.swift */; };
-		F295D1051CCA91350097C30A /* JSUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1021CCA91350097C30A /* JSUtil.swift */; };
-		F295D1061CCA91350097C30A /* WKWebView+HIPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1031CCA91350097C30A /* WKWebView+HIPExtensions.swift */; };
+		F295D0FF1CCA91120097C30A /* SimplestExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D0FD1CCA91120097C30A /* SimplestExampleWebApp.swift */; };
+		F295D1001CCA91120097C30A /* SimplestExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D0FE1CCA91120097C30A /* SimplestExampleWebAppViewController.swift */; };
+		F295D1041CCA91350097C30A /* BasicLogging.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1011CCA91350097C30A /* BasicLogging.swift */; };
 		F295D10B1CCA91430097C30A /* WebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1071CCA91430097C30A /* WebApp.swift */; };
 		F295D10C1CCA91430097C30A /* WebAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1081CCA91430097C30A /* WebAppError.swift */; };
 		F295D10D1CCA91430097C30A /* WebAppViewControllerLoggingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1091CCA91430097C30A /* WebAppViewControllerLoggingDelegate.swift */; };
 		F295D10E1CCA91430097C30A /* WebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D10A1CCA91430097C30A /* WebAppViewController.swift */; };
-		F295D1111CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1101CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift */; };
-		F295D1131CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1121CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift */; };
-		F295D1151CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D1141CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html */; };
-		F295D11A1CCA9C580097C30A /* HIPUserScriptExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1191CCA9C580097C30A /* HIPUserScriptExampleWebAppViewController.swift */; };
-		F295D11C1CCA9C6E0097C30A /* HIPUserScriptExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D11B1CCA9C6E0097C30A /* HIPUserScriptExampleWebApp.swift */; };
-		F295D11E1CCA9C930097C30A /* HIPUserScriptExampleWebApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D11D1CCA9C930097C30A /* HIPUserScriptExampleWebApp.html */; };
-		F295D1211CCA9F8F0097C30A /* HIPNavigationDelegateExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1201CCA9F8F0097C30A /* HIPNavigationDelegateExampleWebApp.swift */; };
-		F295D1231CCA9F9B0097C30A /* HIPNavigationDelegateExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1221CCA9F9B0097C30A /* HIPNavigationDelegateExampleWebAppViewController.swift */; };
-		F295D1251CCA9FA60097C30A /* HIPNavigationDelegateExampleWebApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D1241CCA9FA60097C30A /* HIPNavigationDelegateExampleWebApp.html */; };
+		F295D1111CCA91F00097C30A /* MessageHandlingExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1101CCA91F00097C30A /* MessageHandlingExampleWebApp.swift */; };
+		F295D1131CCA92010097C30A /* MessageHandlingExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1121CCA92010097C30A /* MessageHandlingExampleWebAppViewController.swift */; };
+		F295D1151CCA924A0097C30A /* MessageHandlingExampleWebApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D1141CCA924A0097C30A /* MessageHandlingExampleWebApp.html */; };
+		F295D11A1CCA9C580097C30A /* UserScriptExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1191CCA9C580097C30A /* UserScriptExampleWebAppViewController.swift */; };
+		F295D11C1CCA9C6E0097C30A /* UserScriptExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D11B1CCA9C6E0097C30A /* UserScriptExampleWebApp.swift */; };
+		F295D11E1CCA9C930097C30A /* UserScriptExampleWebApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D11D1CCA9C930097C30A /* UserScriptExampleWebApp.html */; };
+		F295D1211CCA9F8F0097C30A /* NavigationDelegateExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1201CCA9F8F0097C30A /* NavigationDelegateExampleWebApp.swift */; };
+		F295D1231CCA9F9B0097C30A /* NavigationDelegateExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1221CCA9F9B0097C30A /* NavigationDelegateExampleWebAppViewController.swift */; };
+		F295D1251CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D1241CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,24 +64,22 @@
 		F2311F1E1CB5853F004F0815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F295D0D81CCA8CDE0097C30A /* HIPWebApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HIPWebApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F295D0DC1CCA8CDE0097C30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F295D0FD1CCA91120097C30A /* HIPSimplestExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPSimplestExampleWebApp.swift; path = Examples/HIPSimplestExampleWebApp.swift; sourceTree = "<group>"; };
-		F295D0FE1CCA91120097C30A /* HIPSimplestExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPSimplestExampleWebAppViewController.swift; path = Examples/HIPSimplestExampleWebAppViewController.swift; sourceTree = "<group>"; };
-		F295D1011CCA91350097C30A /* HIPBasicLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPBasicLogging.swift; path = Utils/HIPBasicLogging.swift; sourceTree = "<group>"; };
-		F295D1021CCA91350097C30A /* JSUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JSUtil.swift; path = Utils/JSUtil.swift; sourceTree = "<group>"; };
-		F295D1031CCA91350097C30A /* WKWebView+HIPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "WKWebView+HIPExtensions.swift"; path = "Utils/WKWebView+HIPExtensions.swift"; sourceTree = "<group>"; };
+		F295D0FD1CCA91120097C30A /* SimplestExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimplestExampleWebApp.swift; path = Examples/SimplestExampleWebApp.swift; sourceTree = "<group>"; };
+		F295D0FE1CCA91120097C30A /* SimplestExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SimplestExampleWebAppViewController.swift; path = Examples/SimplestExampleWebAppViewController.swift; sourceTree = "<group>"; };
+		F295D1011CCA91350097C30A /* BasicLogging.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BasicLogging.swift; path = Utils/BasicLogging.swift; sourceTree = "<group>"; };
 		F295D1071CCA91430097C30A /* WebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApp.swift; sourceTree = "<group>"; };
 		F295D1081CCA91430097C30A /* WebAppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAppError.swift; sourceTree = "<group>"; };
 		F295D1091CCA91430097C30A /* WebAppViewControllerLoggingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAppViewControllerLoggingDelegate.swift; sourceTree = "<group>"; };
 		F295D10A1CCA91430097C30A /* WebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebAppViewController.swift; sourceTree = "<group>"; };
-		F295D1101CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPMesssageHandlingExampleWebApp.swift; path = Examples/HIPMesssageHandlingExampleWebApp.swift; sourceTree = "<group>"; };
-		F295D1121CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPMessageHandlingExampleWebAppViewController.swift; path = Examples/HIPMessageHandlingExampleWebAppViewController.swift; sourceTree = "<group>"; };
-		F295D1141CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = HIPMessageHandlingExampleWebApp.html; path = Examples/HIPMessageHandlingExampleWebApp.html; sourceTree = "<group>"; };
-		F295D1191CCA9C580097C30A /* HIPUserScriptExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPUserScriptExampleWebAppViewController.swift; path = Examples/HIPUserScriptExampleWebAppViewController.swift; sourceTree = "<group>"; };
-		F295D11B1CCA9C6E0097C30A /* HIPUserScriptExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPUserScriptExampleWebApp.swift; path = Examples/HIPUserScriptExampleWebApp.swift; sourceTree = "<group>"; };
-		F295D11D1CCA9C930097C30A /* HIPUserScriptExampleWebApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = HIPUserScriptExampleWebApp.html; path = Examples/HIPUserScriptExampleWebApp.html; sourceTree = "<group>"; };
-		F295D1201CCA9F8F0097C30A /* HIPNavigationDelegateExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPNavigationDelegateExampleWebApp.swift; path = Examples/HIPNavigationDelegateExampleWebApp.swift; sourceTree = "<group>"; };
-		F295D1221CCA9F9B0097C30A /* HIPNavigationDelegateExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPNavigationDelegateExampleWebAppViewController.swift; path = Examples/HIPNavigationDelegateExampleWebAppViewController.swift; sourceTree = "<group>"; };
-		F295D1241CCA9FA60097C30A /* HIPNavigationDelegateExampleWebApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = HIPNavigationDelegateExampleWebApp.html; path = Examples/HIPNavigationDelegateExampleWebApp.html; sourceTree = "<group>"; };
+		F295D1101CCA91F00097C30A /* MessageHandlingExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageHandlingExampleWebApp.swift; path = Examples/MessageHandlingExampleWebApp.swift; sourceTree = "<group>"; };
+		F295D1121CCA92010097C30A /* MessageHandlingExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MessageHandlingExampleWebAppViewController.swift; path = Examples/MessageHandlingExampleWebAppViewController.swift; sourceTree = "<group>"; };
+		F295D1141CCA924A0097C30A /* MessageHandlingExampleWebApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = MessageHandlingExampleWebApp.html; path = Examples/MessageHandlingExampleWebApp.html; sourceTree = "<group>"; };
+		F295D1191CCA9C580097C30A /* UserScriptExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserScriptExampleWebAppViewController.swift; path = Examples/UserScriptExampleWebAppViewController.swift; sourceTree = "<group>"; };
+		F295D11B1CCA9C6E0097C30A /* UserScriptExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserScriptExampleWebApp.swift; path = Examples/UserScriptExampleWebApp.swift; sourceTree = "<group>"; };
+		F295D11D1CCA9C930097C30A /* UserScriptExampleWebApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = UserScriptExampleWebApp.html; path = Examples/UserScriptExampleWebApp.html; sourceTree = "<group>"; };
+		F295D1201CCA9F8F0097C30A /* NavigationDelegateExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationDelegateExampleWebApp.swift; path = Examples/NavigationDelegateExampleWebApp.swift; sourceTree = "<group>"; };
+		F295D1221CCA9F9B0097C30A /* NavigationDelegateExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationDelegateExampleWebAppViewController.swift; path = Examples/NavigationDelegateExampleWebAppViewController.swift; sourceTree = "<group>"; };
+		F295D1241CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = NavigationDelegateExampleWebApp.html; path = Examples/NavigationDelegateExampleWebApp.html; sourceTree = "<group>"; };
 		F295D1261CCAA1B80097C30A /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,8 +149,8 @@
 		F295D0FC1CCA8F780097C30A /* Simplest */ = {
 			isa = PBXGroup;
 			children = (
-				F295D0FD1CCA91120097C30A /* HIPSimplestExampleWebApp.swift */,
-				F295D0FE1CCA91120097C30A /* HIPSimplestExampleWebAppViewController.swift */,
+				F295D0FD1CCA91120097C30A /* SimplestExampleWebApp.swift */,
+				F295D0FE1CCA91120097C30A /* SimplestExampleWebAppViewController.swift */,
 			);
 			name = Simplest;
 			sourceTree = "<group>";
@@ -162,9 +158,9 @@
 		F295D10F1CCA91880097C30A /* Message handling */ = {
 			isa = PBXGroup;
 			children = (
-				F295D1101CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift */,
-				F295D1121CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift */,
-				F295D1141CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html */,
+				F295D1101CCA91F00097C30A /* MessageHandlingExampleWebApp.swift */,
+				F295D1121CCA92010097C30A /* MessageHandlingExampleWebAppViewController.swift */,
+				F295D1141CCA924A0097C30A /* MessageHandlingExampleWebApp.html */,
 			);
 			name = "Message handling";
 			sourceTree = "<group>";
@@ -172,9 +168,9 @@
 		F295D1161CCA9C200097C30A /* User scripts */ = {
 			isa = PBXGroup;
 			children = (
-				F295D11B1CCA9C6E0097C30A /* HIPUserScriptExampleWebApp.swift */,
-				F295D1191CCA9C580097C30A /* HIPUserScriptExampleWebAppViewController.swift */,
-				F295D11D1CCA9C930097C30A /* HIPUserScriptExampleWebApp.html */,
+				F295D11B1CCA9C6E0097C30A /* UserScriptExampleWebApp.swift */,
+				F295D1191CCA9C580097C30A /* UserScriptExampleWebAppViewController.swift */,
+				F295D11D1CCA9C930097C30A /* UserScriptExampleWebApp.html */,
 			);
 			name = "User scripts";
 			sourceTree = "<group>";
@@ -182,9 +178,9 @@
 		F295D11F1CCA9F530097C30A /* Navigation delegate */ = {
 			isa = PBXGroup;
 			children = (
-				F295D1201CCA9F8F0097C30A /* HIPNavigationDelegateExampleWebApp.swift */,
-				F295D1221CCA9F9B0097C30A /* HIPNavigationDelegateExampleWebAppViewController.swift */,
-				F295D1241CCA9FA60097C30A /* HIPNavigationDelegateExampleWebApp.html */,
+				F295D1201CCA9F8F0097C30A /* NavigationDelegateExampleWebApp.swift */,
+				F295D1221CCA9F9B0097C30A /* NavigationDelegateExampleWebAppViewController.swift */,
+				F295D1241CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html */,
 			);
 			name = "Navigation delegate";
 			sourceTree = "<group>";
@@ -192,9 +188,7 @@
 		F2DD53D11CB589D80091B213 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				F295D1011CCA91350097C30A /* HIPBasicLogging.swift */,
-				F295D1021CCA91350097C30A /* JSUtil.swift */,
-				F295D1031CCA91350097C30A /* WKWebView+HIPExtensions.swift */,
+				F295D1011CCA91350097C30A /* BasicLogging.swift */,
 			);
 			name = Utils;
 			sourceTree = "<group>";
@@ -304,9 +298,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2311F1D1CB5853F004F0815 /* LaunchScreen.storyboard in Resources */,
-				F295D11E1CCA9C930097C30A /* HIPUserScriptExampleWebApp.html in Resources */,
-				F295D1151CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html in Resources */,
-				F295D1251CCA9FA60097C30A /* HIPNavigationDelegateExampleWebApp.html in Resources */,
+				F295D11E1CCA9C930097C30A /* UserScriptExampleWebApp.html in Resources */,
+				F295D1151CCA924A0097C30A /* MessageHandlingExampleWebApp.html in Resources */,
+				F295D1251CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html in Resources */,
 				F2311F1A1CB5853F004F0815 /* Assets.xcassets in Resources */,
 				F2311F181CB5853F004F0815 /* Main.storyboard in Resources */,
 			);
@@ -326,18 +320,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F295D11C1CCA9C6E0097C30A /* HIPUserScriptExampleWebApp.swift in Sources */,
-				F295D1041CCA91350097C30A /* HIPBasicLogging.swift in Sources */,
-				F295D11A1CCA9C580097C30A /* HIPUserScriptExampleWebAppViewController.swift in Sources */,
-				F295D1111CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift in Sources */,
-				F295D1051CCA91350097C30A /* JSUtil.swift in Sources */,
-				F295D1131CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift in Sources */,
-				F295D1211CCA9F8F0097C30A /* HIPNavigationDelegateExampleWebApp.swift in Sources */,
-				F295D1001CCA91120097C30A /* HIPSimplestExampleWebAppViewController.swift in Sources */,
+				F295D11C1CCA9C6E0097C30A /* UserScriptExampleWebApp.swift in Sources */,
+				F295D1041CCA91350097C30A /* BasicLogging.swift in Sources */,
+				F295D11A1CCA9C580097C30A /* UserScriptExampleWebAppViewController.swift in Sources */,
+				F295D1111CCA91F00097C30A /* MessageHandlingExampleWebApp.swift in Sources */,
+				F295D1131CCA92010097C30A /* MessageHandlingExampleWebAppViewController.swift in Sources */,
+				F295D1211CCA9F8F0097C30A /* NavigationDelegateExampleWebApp.swift in Sources */,
+				F295D1001CCA91120097C30A /* SimplestExampleWebAppViewController.swift in Sources */,
 				F2311F131CB5853F004F0815 /* AppDelegate.swift in Sources */,
-				F295D0FF1CCA91120097C30A /* HIPSimplestExampleWebApp.swift in Sources */,
-				F295D1061CCA91350097C30A /* WKWebView+HIPExtensions.swift in Sources */,
-				F295D1231CCA9F9B0097C30A /* HIPNavigationDelegateExampleWebAppViewController.swift in Sources */,
+				F295D0FF1CCA91120097C30A /* SimplestExampleWebApp.swift in Sources */,
+				F295D1231CCA9F9B0097C30A /* NavigationDelegateExampleWebAppViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

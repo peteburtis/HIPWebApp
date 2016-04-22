@@ -27,7 +27,7 @@ import WebKit
  Simplest possible web app:
  
  ````swift
- class HIPSimplestExampleWebApp: WebApp {
+ class SimplestExampleWebApp: WebApp {
      var appIdentifier: String { return "google" }
      var initialURL: NSURL { return NSURL(string: "https://google.com")! }
  }

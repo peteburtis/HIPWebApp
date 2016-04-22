@@ -21,9 +21,9 @@ import WebKit
  Simplest possible view controller:
 
  ````swift
- class HIPSimplestExampleWebAppViewController: WebAppViewController {
+ class SimplestExampleWebAppViewController: WebAppViewController {
 
-     override func createWebApp() -> WebApp? { return HIPSimplestExampleWebApp() }
+     override func createWebApp() -> WebApp? { return SimplestExampleWebApp() }
 
      override func viewDidLoad() {
          // optional:

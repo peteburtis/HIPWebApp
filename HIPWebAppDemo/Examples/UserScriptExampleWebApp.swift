@@ -1,5 +1,5 @@
 //
-//  HIPUserScriptExampleWebApp.swift
+//  UserScriptExampleWebApp.swift
 //  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
@@ -11,18 +11,18 @@ import WebKit
 import HIPWebApp
 
 
-class HIPUserScriptExampleWebApp: WebApp {
+class UserScriptExampleWebApp: WebApp {
     var appIdentifier: String { return "user-script" }
 
     var initialURL: NSURL {
-        let bundle = NSBundle(forClass: HIPUserScriptExampleWebApp.self)
-        let htmlPath = bundle.pathForResource("HIPUserScriptExampleWebApp", ofType: "html")!
+        let bundle = NSBundle(forClass: UserScriptExampleWebApp.self)
+        let htmlPath = bundle.pathForResource("UserScriptExampleWebApp", ofType: "html")!
         return NSURL(fileURLWithPath: htmlPath)
     }
 }
 
 
-extension HIPUserScriptExampleWebApp: WebAppConfiguring {
+extension UserScriptExampleWebApp: WebAppConfiguring {
     func getWebViewConfiguration() -> WKWebViewConfiguration {
         let config = WKWebViewConfiguration()
 

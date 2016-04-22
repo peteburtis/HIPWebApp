@@ -1,5 +1,5 @@
 //
-//  HIPUserScriptExampleWebAppViewController.swift
+//  UserScriptExampleWebAppViewController.swift
 //  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
@@ -10,8 +10,8 @@ import Foundation
 import HIPWebApp
 
 
-class HIPUserScriptExampleWebAppViewController: WebAppViewController {
-    override func createWebApp() -> WebApp? { return HIPUserScriptExampleWebApp() }
+class UserScriptExampleWebAppViewController: WebAppViewController {
+    override func createWebApp() -> WebApp? { return UserScriptExampleWebApp() }
 
     override func viewDidLoad() {
         self.loggingDelegate = BASIC_LOGGING

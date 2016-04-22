@@ -1,5 +1,5 @@
 //
-//  HIPBasicLogging.swift
+//  BasicLogging.swift
 //  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
@@ -10,7 +10,7 @@ import Foundation
 import HIPWebApp
 
 
-class HIPBasicLogging: WebAppViewControllerLoggingDelegate {
+class BasicLogging: WebAppViewControllerLoggingDelegate {
     func debug(message: String) {
         print("DEBUG: \(message)")
     }
@@ -23,4 +23,4 @@ class HIPBasicLogging: WebAppViewControllerLoggingDelegate {
         print("ERROR: \(message)")
     }
 }
-let BASIC_LOGGING = HIPBasicLogging()
+let BASIC_LOGGING = BasicLogging()

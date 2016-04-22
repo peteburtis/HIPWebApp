@@ -9,7 +9,7 @@
         <!--Simple web page-->
         <scene sceneID="SAS-oU-M6q">
             <objects>
-                <viewController id="YWn-Qi-IlS" customClass="HIPSimplestExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YWn-Qi-IlS" customClass="SimplestExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nFh-zH-wvy"/>
                         <viewControllerLayoutGuide type="bottom" id="07x-rb-5xT"/>
@@ -34,7 +34,7 @@
         <!--Message passing-->
         <scene sceneID="RF5-Xu-frQ">
             <objects>
-                <viewController id="CBA-9W-OlX" customClass="HIPMessageHandlingExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CBA-9W-OlX" customClass="MessageHandlingExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="UDS-g3-RY3"/>
                         <viewControllerLayoutGuide type="bottom" id="LdW-SD-bLc"/>
@@ -112,7 +112,7 @@
         <!--User scripts-->
         <scene sceneID="DiT-Hf-Wqn">
             <objects>
-                <viewController id="V4D-4K-nT7" customClass="HIPUserScriptExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="V4D-4K-nT7" customClass="UserScriptExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Zfu-in-bMD"/>
                         <viewControllerLayoutGuide type="bottom" id="aAw-gf-EfZ"/>
@@ -134,7 +134,7 @@
         <!--Navigation delegate-->
         <scene sceneID="OMJ-4g-9gP">
             <objects>
-                <viewController id="5dc-LQ-jEt" customClass="HIPNavigationDelegateExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5dc-LQ-jEt" customClass="NavigationDelegateExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="kGZ-3e-Aih"/>
                         <viewControllerLayoutGuide type="bottom" id="vZi-2b-5Jb"/>

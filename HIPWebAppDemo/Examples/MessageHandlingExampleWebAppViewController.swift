@@ -1,5 +1,5 @@
 //
-//  HIPMessageHandlingExampleWebAppViewController.swift
+//  MessageHandlingExampleWebAppViewController.swift
 //  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
@@ -10,13 +10,13 @@ import Foundation
 import HIPWebApp
 
 
-class HIPMessageHandlingExampleWebAppViewController: WebAppViewController, HIPMessageHandlingExampleWebAppDelegate {
+class MessageHandlingExampleWebAppViewController: WebAppViewController, MessageHandlingExampleWebAppDelegate {
 
     /// Convenience cast to expected web app class
-    private var _messageHandlingWebApp: HIPMessageHandlingExampleWebApp? { return webApp as? HIPMessageHandlingExampleWebApp }
+    private var _messageHandlingWebApp: MessageHandlingExampleWebApp? { return webApp as? MessageHandlingExampleWebApp }
 
     override func createWebApp() -> WebApp? {
-        let webApp = HIPMessageHandlingExampleWebApp()
+        let webApp = MessageHandlingExampleWebApp()
         webApp.delegate = self
         return webApp
     }
@@ -37,7 +37,7 @@ class HIPMessageHandlingExampleWebAppViewController: WebAppViewController, HIPMe
 
 
 //MARK: Actions
-extension HIPMessageHandlingExampleWebAppViewController {
+extension MessageHandlingExampleWebAppViewController {
     @IBAction func redAction(sender: AnyObject? = nil) {
         _messageHandlingWebApp?.setButtonColor("red")
     }

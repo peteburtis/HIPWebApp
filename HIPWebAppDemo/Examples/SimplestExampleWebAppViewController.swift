@@ -1,5 +1,5 @@
 //
-//  HIPSimplestExampleWebAppViewController.swift
+//  SimplestExampleWebAppViewController.swift
 //  WebAppDemo
 //
 //  Created by Steve Johnson on 4/6/16.
@@ -10,9 +10,9 @@ import UIKit
 import HIPWebApp
 
 
-class HIPSimplestExampleWebAppViewController: WebAppViewController {
+class SimplestExampleWebAppViewController: WebAppViewController {
 
-    override func createWebApp() -> WebApp? { return HIPSimplestExampleWebApp() }
+    override func createWebApp() -> WebApp? { return SimplestExampleWebApp() }
 
     override func viewDidLoad() {
         self.loggingDelegate = BASIC_LOGGING

@@ -21,7 +21,7 @@ import Foundation
 import HIPWebApp
 
 
-class HIPSimplestExampleWebApp: WebApp {
+class SimplestExampleWebApp: WebApp {
     var appIdentifier: String { return "google" }
     var initialURL: NSURL { return NSURL(string: "https://google.com")! }
 }
@@ -36,9 +36,9 @@ import UIKit
 import HIPWebApp
 
 
-class HIPSimplestExampleWebAppViewController: WebAppViewController {
+class SimplestExampleWebAppViewController: WebAppViewController {
 
-    override func createWebApp() -> WebApp? { return HIPSimplestExampleWebApp() }
+    override func createWebApp() -> WebApp? { return SimplestExampleWebApp() }
 
     override func viewDidLoad() {
         // optional: set self.WebAppViewControllerLoggingDelegate to enable logging

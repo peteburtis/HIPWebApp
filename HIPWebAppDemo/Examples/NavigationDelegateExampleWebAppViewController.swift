@@ -1,5 +1,5 @@
 //
-//  HIPNavigationDelegateExampleWebAppViewController.swift
+//  NavigationDelegateExampleWebAppViewController.swift
 //  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
@@ -10,8 +10,8 @@ import Foundation
 import HIPWebApp
 
 
-class HIPNavigationDelegateExampleWebAppViewController: WebAppViewController {
-    override func createWebApp() -> WebApp? { return HIPNavigationDelegateExampleWebApp() }
+class NavigationDelegateExampleWebAppViewController: WebAppViewController {
+    override func createWebApp() -> WebApp? { return NavigationDelegateExampleWebApp() }
 
     override func viewDidLoad() {
         self.loggingDelegate = BASIC_LOGGING
