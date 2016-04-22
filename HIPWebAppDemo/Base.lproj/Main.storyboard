@@ -15,19 +15,21 @@
                         <viewControllerLayoutGuide type="bottom" id="07x-rb-5xT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Z6N-ld-kXJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Simple web page" id="OhO-dO-TJQ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
                     <connections>
                         <outlet property="webViewContainer" destination="Z6N-ld-kXJ" id="B5R-AQ-6WQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtk-8B-dTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="-93"/>
+            <point key="canvasLocation" x="1981" y="-77"/>
         </scene>
         <!--Message passing-->
         <scene sceneID="RF5-Xu-frQ">
@@ -38,18 +40,18 @@
                         <viewControllerLayoutGuide type="bottom" id="LdW-SD-bLc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FDe-rI-gbS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yys-lf-Hvg">
-                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="256" width="300" height="44"/>
                                 <items>
                                     <barButtonItem title="Button color: " id="zob-Lu-yji">
                                         <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="m9Q-3z-GCX">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pOu-iG-MMA">
-                                            <rect key="frame" x="133" y="7" width="30" height="30"/>
+                                            <rect key="frame" x="121" y="7" width="30" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Red"/>
                                             <connections>
@@ -59,7 +61,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="Ush-m8-da6">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JTw-vW-Qpl">
-                                            <rect key="frame" x="173" y="7" width="42" height="30"/>
+                                            <rect key="frame" x="161" y="7" width="42" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Green"/>
                                             <connections>
@@ -69,7 +71,7 @@
                                     </barButtonItem>
                                     <barButtonItem style="plain" id="4kq-BW-CzB">
                                         <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6py-UF-whH">
-                                            <rect key="frame" x="225" y="7" width="31" height="30"/>
+                                            <rect key="frame" x="213" y="7" width="31" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Blue"/>
                                             <connections>
@@ -79,23 +81,58 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IwN-2x-EZD">
+                                <rect key="frame" x="0.0" y="64" width="300" height="192"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="Yys-lf-Hvg" firstAttribute="top" secondItem="IwN-2x-EZD" secondAttribute="bottom" id="78A-bB-4AA"/>
                             <constraint firstAttribute="trailing" secondItem="Yys-lf-Hvg" secondAttribute="trailing" id="AnU-SR-0t1"/>
+                            <constraint firstItem="IwN-2x-EZD" firstAttribute="leading" secondItem="FDe-rI-gbS" secondAttribute="leading" id="DSi-17-pGa"/>
                             <constraint firstItem="LdW-SD-bLc" firstAttribute="top" secondItem="Yys-lf-Hvg" secondAttribute="bottom" id="TvQ-cz-Xex"/>
+                            <constraint firstAttribute="trailing" secondItem="IwN-2x-EZD" secondAttribute="trailing" id="bPf-ju-q74"/>
                             <constraint firstItem="Yys-lf-Hvg" firstAttribute="leading" secondItem="FDe-rI-gbS" secondAttribute="leading" id="lqq-Qh-mbg"/>
+                            <constraint firstItem="IwN-2x-EZD" firstAttribute="top" secondItem="UDS-g3-RY3" secondAttribute="bottom" id="mOj-DJ-Srs"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Message passing" id="4ld-W0-Ywl"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
                     <connections>
-                        <outlet property="webViewContainer" destination="FDe-rI-gbS" id="3KT-sY-w2O"/>
+                        <outlet property="webViewContainer" destination="IwN-2x-EZD" id="tEo-ak-n8q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DM2-bg-qTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098" y="562"/>
+            <point key="canvasLocation" x="1981" y="282"/>
+        </scene>
+        <!--User scripts-->
+        <scene sceneID="DiT-Hf-Wqn">
+            <objects>
+                <viewController id="V4D-4K-nT7" customClass="HIPUserScriptExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zfu-in-bMD"/>
+                        <viewControllerLayoutGuide type="bottom" id="aAw-gf-EfZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="reW-OO-D5S">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="User scripts" id="qOK-bN-uyR"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="300" height="300"/>
+                    <connections>
+                        <outlet property="webViewContainer" destination="reW-OO-D5S" id="jxu-eq-IIa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cw8-Cd-ipJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1981" y="654"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OGS-LE-KPD">
@@ -141,13 +178,22 @@
                                     <segue destination="CBA-9W-OlX" kind="show" id="w56-5p-utf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8rB-rO-1vx">
+                                <rect key="frame" x="20" y="140" width="83" height="30"/>
+                                <state key="normal" title="User scripts"/>
+                                <connections>
+                                    <segue destination="V4D-4K-nT7" kind="show" id="pAC-8u-Mxx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="leadingMargin" secondItem="8rB-rO-1vx" secondAttribute="leading" id="7L1-cH-oM7"/>
                             <constraint firstItem="WC4-Yx-dIm" firstAttribute="leading" secondItem="h9u-Wn-IKY" secondAttribute="leadingMargin" id="Fvr-rs-wyC"/>
                             <constraint firstItem="WC4-Yx-dIm" firstAttribute="top" secondItem="Xsu-4X-L51" secondAttribute="bottom" id="QJD-LB-yHR"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Efi-M8-wth" secondAttribute="leading" id="hSF-XB-Hnm"/>
                             <constraint firstItem="Efi-M8-wth" firstAttribute="top" secondItem="WC4-Yx-dIm" secondAttribute="bottom" constant="8" id="rtN-JI-mF5"/>
+                            <constraint firstItem="8rB-rO-1vx" firstAttribute="top" secondItem="Efi-M8-wth" secondAttribute="bottom" constant="8" id="tBn-gW-gdl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Examples" id="r4V-C5-u1R"/>

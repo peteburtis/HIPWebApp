@@ -49,7 +49,7 @@ public protocol HIPWebAppNavigating {
 
 
 /// Add conformance to this protocol if your HIPWebApp would like a reference to the WKWebView it runs in.
-public protocol HIPWebViewReferencing {
+public protocol HIPWebAppWebViewReferencing {
     /// Perform any configuration not covered by the other protocol methods
     /// and/or grab a reference to the web view if you want it
     func willRunInWebView(webView: WKWebView) -> ()

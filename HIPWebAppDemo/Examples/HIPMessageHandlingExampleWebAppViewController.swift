@@ -12,6 +12,7 @@ import HIPWebApp
 
 class HIPMessageHandlingExampleWebAppViewController: HIPWebAppViewController, HIPMessageHandlingExampleWebAppDelegate {
 
+    /// Convenience cast to expected web app class
     private var _messageHandlingWebApp: HIPMessageHandlingExampleWebApp? { return webApp as? HIPMessageHandlingExampleWebApp }
 
     override func createWebApp() -> HIPWebApp? {

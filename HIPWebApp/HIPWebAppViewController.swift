@@ -27,7 +27,7 @@ public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
 
     private var _webAppConfiguring: HIPWebAppConfiguring? { return webApp as? HIPWebAppConfiguring }
     private var _webAppNavigating: HIPWebAppNavigating? { return webApp as? HIPWebAppNavigating }
-    private var _webViewReferencing: HIPWebViewReferencing? { return webApp as? HIPWebViewReferencing }
+    private var _webViewReferencing: HIPWebAppWebViewReferencing? { return webApp as? HIPWebAppWebViewReferencing }
     private var _webViewMessageHandling: HIPWebAppMessageHandling? { return webApp as? HIPWebAppMessageHandling }
 
     @IBOutlet private var webViewContainer: UIView?

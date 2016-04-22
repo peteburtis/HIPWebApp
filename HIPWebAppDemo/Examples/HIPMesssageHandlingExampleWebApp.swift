@@ -16,7 +16,7 @@ protocol HIPMessageHandlingExampleWebAppDelegate: class {
 }
 
 
-class HIPMessageHandlingExampleWebApp: NSObject, HIPWebApp, HIPWebViewReferencing, HIPWebAppMessageHandling {
+class HIPMessageHandlingExampleWebApp: HIPWebApp {
     var appIdentifier: String { return "message-handling" }
 
     var initialURL: NSURL {
@@ -28,10 +28,20 @@ class HIPMessageHandlingExampleWebApp: NSObject, HIPWebApp, HIPWebViewReferencin
     weak var webView: WKWebView? = nil
     weak var delegate: HIPMessageHandlingExampleWebAppDelegate?
 
+    func setButtonColor(cssColorString: String) {
+        webView?.evaluateJavaScript("window.containerAPI.changeButtonColor('\(cssColorString)');", completionHandler: nil)
+    }
+}
+
+
+extension HIPMessageHandlingExampleWebApp: HIPWebAppWebViewReferencing {
     func willRunInWebView(webView: WKWebView) {
         self.webView = webView
     }
+}
 
+
+extension HIPMessageHandlingExampleWebApp: HIPWebAppMessageHandling {
     var supportedMessageNames: [String] { return ["BUTTON_CLICKED"] }
 
     func handleMessage(name: String, _ body: AnyObject) -> Bool {
@@ -40,9 +50,5 @@ class HIPMessageHandlingExampleWebApp: NSObject, HIPWebApp, HIPWebViewReferencin
         default: return false
         }
         return true
-    }
-
-    func setButtonColor(cssColorString: String) {
-        webView?.evaluateJavaScript("window.containerAPI.changeButtonColor('\(cssColorString)');", completionHandler: nil)
     }
 }

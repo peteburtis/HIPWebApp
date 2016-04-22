@@ -11,7 +11,7 @@ import WebKit
 import HIPWebApp
 
 
-class HIPSimplestExampleWebApp: NSObject, HIPWebApp {
+class HIPSimplestExampleWebApp: HIPWebApp {
     var appIdentifier: String { return "google" }
     var initialURL: NSURL { return NSURL(string: "https://google.com")! }
 }
