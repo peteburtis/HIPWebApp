@@ -11,14 +11,14 @@ import HIPWebApp
 
 
 class UserScriptExampleWebAppViewController: WebAppViewController {
-    override func createWebApp() -> WebApp? { return UserScriptExampleWebApp() }
+    override func createWebApp() -> WebApp { return UserScriptExampleWebApp() }
 
     override func viewDidLoad() {
         self.loggingDelegate = BASIC_LOGGING
 
         super.viewDidLoad()
 
-        self.loadURL(webApp!.initialURL)
+        self.loadWebAppInitialURL()
     }
 }
 

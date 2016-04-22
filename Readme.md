@@ -42,14 +42,14 @@ import HIPWebApp
 
 class SimplestExampleWebAppViewController: WebAppViewController {
 
-    override func createWebApp() -> WebApp? { return SimplestExampleWebApp() }
+    override func createWebApp() -> WebApp { return SimplestExampleWebApp() }
 
     override func viewDidLoad() {
         // optional: set self.WebAppViewControllerLoggingDelegate to enable logging
 
         super.viewDidLoad()
 
-        self.loadURL(webApp!.initialURL)
+        self.loadWebAppInitialURL()
     }
 
 }

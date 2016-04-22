@@ -15,7 +15,7 @@ class MessageHandlingExampleWebAppViewController: WebAppViewController, MessageH
     /// Convenience cast to expected web app class
     private var _messageHandlingWebApp: MessageHandlingExampleWebApp? { return webApp as? MessageHandlingExampleWebApp }
 
-    override func createWebApp() -> WebApp? {
+    override func createWebApp() -> WebApp {
         let webApp = MessageHandlingExampleWebApp()
         webApp.delegate = self
         return webApp
@@ -26,7 +26,7 @@ class MessageHandlingExampleWebAppViewController: WebAppViewController, MessageH
 
         super.viewDidLoad()
 
-        self.loadURL(webApp!.initialURL)
+        self.loadWebAppInitialURL()
     }
 
     /// Delegate method implementation

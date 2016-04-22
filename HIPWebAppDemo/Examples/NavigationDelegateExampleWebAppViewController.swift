@@ -11,13 +11,13 @@ import HIPWebApp
 
 
 class NavigationDelegateExampleWebAppViewController: WebAppViewController {
-    override func createWebApp() -> WebApp? { return NavigationDelegateExampleWebApp() }
+    override func createWebApp() -> WebApp { return NavigationDelegateExampleWebApp() }
 
     override func viewDidLoad() {
         self.loggingDelegate = BASIC_LOGGING
 
         super.viewDidLoad()
 
-        self.loadURL(webApp!.initialURL)
+        self.loadWebAppInitialURL()
     }
 }

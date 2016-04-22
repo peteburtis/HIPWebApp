@@ -23,14 +23,14 @@ import WebKit
  ````swift
  class SimplestExampleWebAppViewController: WebAppViewController {
 
-     override func createWebApp() -> WebApp? { return SimplestExampleWebApp() }
+     override func createWebApp() -> WebApp { return SimplestExampleWebApp() }
 
      override func viewDidLoad() {
          // optional:
          // self.loggingDelegate = myWebAppViewControllerLoggingDelegate
 
          super.viewDidLoad()
-         self.loadURL(webApp!.initialURL)
+         self.loadWebAppInitialURL()
      }
 
  }
@@ -64,7 +64,9 @@ public class WebAppViewController: UIViewController, WKScriptMessageHandler {
     ///
     /// It's a method rather than a closure passed to init() because complex uses of WebAppViewController should
     /// probably be subclassing it anyway.
-    public func createWebApp() -> WebApp? { assert(false, "Must override createWebApp()"); return nil }
+    public func createWebApp() -> WebApp {
+        preconditionFailure("You must subclass WebAppViewController and override this method.")
+    }
 
     /// Create and configure the WKWebView using the WebApp (don't add it to the view hierarchy yet)
     private func createWebView() -> WKWebView {
@@ -82,9 +84,8 @@ public class WebAppViewController: UIViewController, WKScriptMessageHandler {
         return _webView
     }
 
-    /// Create the views and WebApp
     override public func loadView() {
-        webApp = createWebApp()!
+        webApp = createWebApp()
 
         super.loadView()
 
@@ -104,6 +105,14 @@ public class WebAppViewController: UIViewController, WKScriptMessageHandler {
         webViewContainer!.addConstraints(
             NSLayoutConstraint.constraintsWithVisualFormat(
                 "V:|[webView]|", options: [], metrics: nil, views: ["webView": webView]))
+    }
+
+    public func loadWebAppInitialURL() {
+        guard let webApp = webApp else {
+            assertionFailure("Can't load web app's initial URL because we don't have one yet")
+            return
+        }
+        loadURL(webApp.initialURL)
     }
 
     /// Perform a GET request for the given URL in the web view
