@@ -32,7 +32,7 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/HIPWebAppViewController.html">HIPWebAppViewController</a>
+                <a href="Classes/WebAppViewController.html">WebAppViewController</a>
               </li>
             </ul>
           </li>
@@ -40,7 +40,7 @@
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/HIPWebAppError.html">HIPWebAppError</a>
+                <a href="Enums/WebAppError.html">WebAppError</a>
               </li>
             </ul>
           </li>
@@ -48,22 +48,22 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebApp.html">HIPWebApp</a>
+                <a href="Protocols/WebApp.html">WebApp</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppConfiguring.html">HIPWebAppConfiguring</a>
+                <a href="Protocols/WebAppConfiguring.html">WebAppConfiguring</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppLoggingDelegate.html">HIPWebAppLoggingDelegate</a>
+                <a href="Protocols/WebAppMessageHandling.html">WebAppMessageHandling</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppMessageHandling.html">HIPWebAppMessageHandling</a>
+                <a href="Protocols/WebAppNavigating.html">WebAppNavigating</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppNavigating.html">HIPWebAppNavigating</a>
+                <a href="Protocols/WebAppViewControllerLoggingDelegate.html">WebAppViewControllerLoggingDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppWebViewReferencing.html">HIPWebAppWebViewReferencing</a>
+                <a href="Protocols/WebAppWebViewReferencing.html">WebAppWebViewReferencing</a>
               </li>
             </ul>
           </li>
@@ -86,30 +86,30 @@ code and your native code.</p>
 <p>The source code comes with a few examples.</p>
 <a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
 
-<p>First, make a subclass of <code>HIPWebApp</code>. The only hard requirements are a string
+<p>First, make a subclass of <code>WebApp</code>. The only hard requirements are a string
 identifier for logging (<code>appIdentifier</code>) and an initial URL.</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Foundation</span>
 <span class="kd">import</span> <span class="kt">HIPWebApp</span>
 
 
-<span class="kd">class</span> <span class="kt">HIPSimplestExampleWebApp</span><span class="p">:</span> <span class="kt">HIPWebApp</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="kt">SimplestExampleWebApp</span><span class="p">:</span> <span class="kt">WebApp</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">appIdentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"google"</span> <span class="p">}</span>
     <span class="k">var</span> <span class="nv">initialURL</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://google.com"</span><span class="p">)</span><span class="o">!</span> <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 
-<p>Then you need a subclass of <code>HIPWebAppViewController</code> to host it. Here is the
+<p>Then you need a subclass of <code>WebAppViewController</code> to host it. Here is the
 minimum viable subclass:</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">UIKit</span>
 <span class="kd">import</span> <span class="kt">HIPWebApp</span>
 
 
-<span class="kd">class</span> <span class="kt">HIPSimplestExampleWebAppViewController</span><span class="p">:</span> <span class="kt">HIPWebAppViewController</span> <span class="p">{</span>
+<span class="kd">class</span> <span class="kt">SimplestExampleWebAppViewController</span><span class="p">:</span> <span class="kt">WebAppViewController</span> <span class="p">{</span>
 
-    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">HIPWebApp</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">HIPSimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WebApp</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">SimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
 
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// optional: set self.loggingDelegate to enable logging</span>
+        <span class="c1">// optional: set self.WebAppViewControllerLoggingDelegate to enable logging</span>
 
         <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
 
@@ -125,17 +125,17 @@ minimum viable subclass:</p>
 protocols:</p>
 
 <ul>
-<li><code>HIPWebAppWebViewReferencing</code> gives you an opportunity to store a reference
+<li><code>WebAppWebViewReferencing</code> gives you an opportunity to store a reference
 to the web view. While this is a very common thing to do, it isn&rsquo;t strictly
 necessary.</li>
-<li><code>HIPWebAppConfiguring</code> lets you provide a <code>WKWebViewConfiguration</code>, meaning
+<li><code>WebAppConfiguring</code> lets you provide a <code>WKWebViewConfiguration</code>, meaning
 you can add user scripts and more.</li>
-<li><code>HIPWebAppNavigating</code> lets you provide a navigation delegate.</li>
-<li><code>HIPWebAppMessageHandling</code> lets you listen for calls to
+<li><code>WebAppNavigating</code> lets you provide a navigation delegate.</li>
+<li><code>WebAppMessageHandling</code> lets you listen for calls to
 <code>messageHandlers[messageName].postMessage(messageBody)</code>.</li>
 </ul>
 
-<p>See <code>HIPWebApp.swift</code> and the examples for details.</p>
+<p>See <code>HIPWebApp/WebApp.swift</code> and <code>HIPWebAppDemo/Examples</code> for details.</p>
 <a href='#further_reading' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='further_reading'>Further reading</h2>
 
 <ul>

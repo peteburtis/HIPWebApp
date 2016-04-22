@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HIPWebAppMessageHandling Protocol Reference</title>
+    <title>WebAppMessageHandling Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/HIPWebAppMessageHandling" class="dashAnchor"></a>
-    <a title="HIPWebAppMessageHandling Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/WebAppMessageHandling" class="dashAnchor"></a>
+    <a title="WebAppMessageHandling Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">HIPWebApp Docs</a> (100% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">HIPWebApp Reference</a>
         <img id="carat" src="../img/carat.png" />
-        HIPWebAppMessageHandling Protocol Reference
+        WebAppMessageHandling Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -33,7 +33,7 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/HIPWebAppViewController.html">HIPWebAppViewController</a>
+                <a href="../Classes/WebAppViewController.html">WebAppViewController</a>
               </li>
             </ul>
           </li>
@@ -41,7 +41,7 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/HIPWebAppError.html">HIPWebAppError</a>
+                <a href="../Enums/WebAppError.html">WebAppError</a>
               </li>
             </ul>
           </li>
@@ -49,22 +49,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebApp.html">HIPWebApp</a>
+                <a href="../Protocols/WebApp.html">WebApp</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppConfiguring.html">HIPWebAppConfiguring</a>
+                <a href="../Protocols/WebAppConfiguring.html">WebAppConfiguring</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppLoggingDelegate.html">HIPWebAppLoggingDelegate</a>
+                <a href="../Protocols/WebAppMessageHandling.html">WebAppMessageHandling</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppMessageHandling.html">HIPWebAppMessageHandling</a>
+                <a href="../Protocols/WebAppNavigating.html">WebAppNavigating</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppNavigating.html">HIPWebAppNavigating</a>
+                <a href="../Protocols/WebAppViewControllerLoggingDelegate.html">WebAppViewControllerLoggingDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppWebViewReferencing.html">HIPWebAppWebViewReferencing</a>
+                <a href="../Protocols/WebAppWebViewReferencing.html">WebAppWebViewReferencing</a>
               </li>
             </ul>
           </li>
@@ -73,14 +73,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>HIPWebAppMessageHandling</h1>
+            <h1>WebAppMessageHandling</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebAppMessageHandling</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">WebAppMessageHandling</span></code></pre>
 
                 </div>
               </div>
-            <p>Add conformance to this protocol if your <code><a href="../Protocols/HIPWebApp.html">HIPWebApp</a></code> would like to listen to calls to
+            <p>Add conformance to this protocol if your <code><a href="../Protocols/WebApp.html">WebApp</a></code> would like to listen to calls to
 <code>webkit.messageHandlers[name].postMessage()</code>.</p>
 
           </section>
@@ -90,9 +90,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vP9HIPWebApp24HIPWebAppMessageHandling21supportedMessageNamesGSaSS_"></a>
+                    <a name="/s:vP9HIPWebApp21WebAppMessageHandling21supportedMessageNamesGSaSS_"></a>
                     <a name="//apple_ref/swift/Property/supportedMessageNames" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vP9HIPWebApp24HIPWebAppMessageHandling21supportedMessageNamesGSaSS_">supportedMessageNames</a>
+                    <a class="token" href="#/s:vP9HIPWebApp21WebAppMessageHandling21supportedMessageNamesGSaSS_">supportedMessageNames</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -112,7 +112,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L72">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebApp.swift#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -120,9 +120,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP9HIPWebApp24HIPWebAppMessageHandling13handleMessageFTSSPs9AnyObject__Sb"></a>
+                    <a name="/s:FP9HIPWebApp21WebAppMessageHandling13handleMessageFTSSPs9AnyObject__Sb"></a>
                     <a name="//apple_ref/swift/Method/handleMessage(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP9HIPWebApp24HIPWebAppMessageHandling13handleMessageFTSSPs9AnyObject__Sb">handleMessage(_:_:)</a>
+                    <a class="token" href="#/s:FP9HIPWebApp21WebAppMessageHandling13handleMessageFTSSPs9AnyObject__Sb">handleMessage(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -142,7 +142,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L75">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebApp.swift#L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -32,7 +32,7 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/HIPWebAppViewController.html">HIPWebAppViewController</a>
+                <a href="Classes/WebAppViewController.html">WebAppViewController</a>
               </li>
             </ul>
           </li>
@@ -40,7 +40,7 @@
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/HIPWebAppError.html">HIPWebAppError</a>
+                <a href="Enums/WebAppError.html">WebAppError</a>
               </li>
             </ul>
           </li>
@@ -48,22 +48,22 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebApp.html">HIPWebApp</a>
+                <a href="Protocols/WebApp.html">WebApp</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppConfiguring.html">HIPWebAppConfiguring</a>
+                <a href="Protocols/WebAppConfiguring.html">WebAppConfiguring</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppLoggingDelegate.html">HIPWebAppLoggingDelegate</a>
+                <a href="Protocols/WebAppMessageHandling.html">WebAppMessageHandling</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppMessageHandling.html">HIPWebAppMessageHandling</a>
+                <a href="Protocols/WebAppNavigating.html">WebAppNavigating</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppNavigating.html">HIPWebAppNavigating</a>
+                <a href="Protocols/WebAppViewControllerLoggingDelegate.html">WebAppViewControllerLoggingDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/HIPWebAppWebViewReferencing.html">HIPWebAppWebViewReferencing</a>
+                <a href="Protocols/WebAppWebViewReferencing.html">WebAppWebViewReferencing</a>
               </li>
             </ul>
           </li>
@@ -82,9 +82,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C9HIPWebApp23HIPWebAppViewController"></a>
-                    <a name="//apple_ref/swift/Class/HIPWebAppViewController" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C9HIPWebApp23HIPWebAppViewController">HIPWebAppViewController</a>
+                    <a name="/s:C9HIPWebApp20WebAppViewController"></a>
+                    <a name="//apple_ref/swift/Class/WebAppViewController" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9HIPWebApp20WebAppViewController">WebAppViewController</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -92,7 +92,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A HIPWebAppViewController is the canonical way to show HIPWebApps to users.</p>
+                        <p>A WebAppViewController is the canonical way to show WebApps to users.</p>
 
 <p>Important note: unless you call ensureWebViewInstantiated(), the web app is not created until the view controller
 is added to the view hierarchy! If you want to start loading the page before you show it to the user, call that
@@ -100,13 +100,13 @@ method.</p>
 
 <p>Simplest possible view controller:</p>
 
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">HIPSimplestExampleWebAppViewController</span><span class="p">:</span> <span class="kt">HIPWebAppViewController</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SimplestExampleWebAppViewController</span><span class="p">:</span> <span class="kt">WebAppViewController</span> <span class="p">{</span>
 
-    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">HIPWebApp</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">HIPSimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WebApp</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">SimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
 
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// optional:</span>
-        <span class="c1">// self.loggingDelegate = myLoggingDelegate</span>
+        <span class="c1">// self.loggingDelegate = myWebAppViewControllerLoggingDelegate</span>
 
         <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
         <span class="k">self</span><span class="o">.</span><span class="nf">loadURL</span><span class="p">(</span><span class="n">webApp</span><span class="o">!.</span><span class="n">initialURL</span><span class="p">)</span>
@@ -115,18 +115,18 @@ method.</p>
 <span class="p">}</span>
 </code></pre>
 
-                        <a href="Classes/HIPWebAppViewController.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/WebAppViewController.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HIPWebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">WebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L39-L138">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L39-L138">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

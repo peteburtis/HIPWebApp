@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HIPWebAppNavigating Protocol Reference</title>
+    <title>WebAppConfiguring Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/HIPWebAppNavigating" class="dashAnchor"></a>
-    <a title="HIPWebAppNavigating Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/WebAppConfiguring" class="dashAnchor"></a>
+    <a title="WebAppConfiguring Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">HIPWebApp Docs</a> (100% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">HIPWebApp Reference</a>
         <img id="carat" src="../img/carat.png" />
-        HIPWebAppNavigating Protocol Reference
+        WebAppConfiguring Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -33,7 +33,7 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/HIPWebAppViewController.html">HIPWebAppViewController</a>
+                <a href="../Classes/WebAppViewController.html">WebAppViewController</a>
               </li>
             </ul>
           </li>
@@ -41,7 +41,7 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/HIPWebAppError.html">HIPWebAppError</a>
+                <a href="../Enums/WebAppError.html">WebAppError</a>
               </li>
             </ul>
           </li>
@@ -49,22 +49,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebApp.html">HIPWebApp</a>
+                <a href="../Protocols/WebApp.html">WebApp</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppConfiguring.html">HIPWebAppConfiguring</a>
+                <a href="../Protocols/WebAppConfiguring.html">WebAppConfiguring</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppLoggingDelegate.html">HIPWebAppLoggingDelegate</a>
+                <a href="../Protocols/WebAppMessageHandling.html">WebAppMessageHandling</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppMessageHandling.html">HIPWebAppMessageHandling</a>
+                <a href="../Protocols/WebAppNavigating.html">WebAppNavigating</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppNavigating.html">HIPWebAppNavigating</a>
+                <a href="../Protocols/WebAppViewControllerLoggingDelegate.html">WebAppViewControllerLoggingDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppWebViewReferencing.html">HIPWebAppWebViewReferencing</a>
+                <a href="../Protocols/WebAppWebViewReferencing.html">WebAppWebViewReferencing</a>
               </li>
             </ul>
           </li>
@@ -73,14 +73,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>HIPWebAppNavigating</h1>
+            <h1>WebAppConfiguring</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebAppNavigating</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">WebAppConfiguring</span></code></pre>
 
                 </div>
               </div>
-            <p>Add conformance to this protocol if your HIPWebApp provides <code>WKNavigationDelegate</code>.</p>
+            <p>Add conformance to this protocol if your WebApp provides a <code>WKWebViewConfiguration</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -89,9 +89,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FP9HIPWebApp19HIPWebAppNavigating28getWebViewNavigationDelegateFT_PSo20WKNavigationDelegate_"></a>
-                    <a name="//apple_ref/swift/Method/getWebViewNavigationDelegate()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FP9HIPWebApp19HIPWebAppNavigating28getWebViewNavigationDelegateFT_PSo20WKNavigationDelegate_">getWebViewNavigationDelegate()</a>
+                    <a name="/s:FP9HIPWebApp17WebAppConfiguring23getWebViewConfigurationFT_CSo22WKWebViewConfiguration"></a>
+                    <a name="//apple_ref/swift/Method/getWebViewConfiguration()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9HIPWebApp17WebAppConfiguring23getWebViewConfigurationFT_CSo22WKWebViewConfiguration">getWebViewConfiguration()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -99,19 +99,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Handle or expose navigation events here</p>
+                        <p>Attach message handlers and user scripts here</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getWebViewNavigationDelegate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WKNavigationDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">getWebViewConfiguration</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WKWebViewConfiguration</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L56">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebApp.swift#L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

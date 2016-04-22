@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>HIPWebApp Protocol Reference</title>
+    <title>WebApp Protocol Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,8 +10,8 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Protocol/HIPWebApp" class="dashAnchor"></a>
-    <a title="HIPWebApp Protocol Reference"></a>
+    <a name="//apple_ref/swift/Protocol/WebApp" class="dashAnchor"></a>
+    <a title="WebApp Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">HIPWebApp Docs</a> (100% documented)</p>
@@ -23,7 +23,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">HIPWebApp Reference</a>
         <img id="carat" src="../img/carat.png" />
-        HIPWebApp Protocol Reference
+        WebApp Protocol Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -33,7 +33,7 @@
             <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/HIPWebAppViewController.html">HIPWebAppViewController</a>
+                <a href="../Classes/WebAppViewController.html">WebAppViewController</a>
               </li>
             </ul>
           </li>
@@ -41,7 +41,7 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/HIPWebAppError.html">HIPWebAppError</a>
+                <a href="../Enums/WebAppError.html">WebAppError</a>
               </li>
             </ul>
           </li>
@@ -49,22 +49,22 @@
             <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebApp.html">HIPWebApp</a>
+                <a href="../Protocols/WebApp.html">WebApp</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppConfiguring.html">HIPWebAppConfiguring</a>
+                <a href="../Protocols/WebAppConfiguring.html">WebAppConfiguring</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppLoggingDelegate.html">HIPWebAppLoggingDelegate</a>
+                <a href="../Protocols/WebAppMessageHandling.html">WebAppMessageHandling</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppMessageHandling.html">HIPWebAppMessageHandling</a>
+                <a href="../Protocols/WebAppNavigating.html">WebAppNavigating</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppNavigating.html">HIPWebAppNavigating</a>
+                <a href="../Protocols/WebAppViewControllerLoggingDelegate.html">WebAppViewControllerLoggingDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/HIPWebAppWebViewReferencing.html">HIPWebAppWebViewReferencing</a>
+                <a href="../Protocols/WebAppWebViewReferencing.html">WebAppWebViewReferencing</a>
               </li>
             </ul>
           </li>
@@ -73,14 +73,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>HIPWebApp</h1>
+            <h1>WebApp</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebApp</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">WebApp</span></code></pre>
 
                 </div>
               </div>
-            <p>A <code>HIPWebApp</code> is an HTTP[S]-accessible location and a string identifier for logging. Optionally, it can also:</p>
+            <p>A <code>WebApp</code> is an HTTP[S]-accessible location and a string identifier for logging. Optionally, it can also:</p>
 
 <ul>
 <li>Store a reference to the <code>WKWebView</code> that hosts it</li>
@@ -89,15 +89,15 @@
 <li>Listen to <code>webkit.messageHandlers[name].postMessage(body)</code> calls</li>
 </ul>
 
-<p>To support these features, have a look at the other protocols starting with <code>HIPWebApp*</code>.</p>
+<p>To support these features, have a look at the other protocols starting with <code>WebApp*</code>.</p>
 
-<p>Conceptually, a <code>HIPWebApp</code> represents your web application in native app code. It has sole responsibility for calling
+<p>Conceptually, a <code>WebApp</code> represents your web application in native app code. It has sole responsibility for calling
 JavaScript in the page and receiving messages. A common pattern is to define a delegate and pass on messages as calls
 to the delegate.</p>
 
 <p>Simplest possible web app:</p>
 
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">HIPSimplestExampleWebApp</span><span class="p">:</span> <span class="kt">HIPWebApp</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SimplestExampleWebApp</span><span class="p">:</span> <span class="kt">WebApp</span> <span class="p">{</span>
     <span class="k">var</span> <span class="nv">appIdentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"google"</span> <span class="p">}</span>
     <span class="k">var</span> <span class="nv">initialURL</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://google.com"</span><span class="p">)</span><span class="o">!</span> <span class="p">}</span>
 <span class="p">}</span>
@@ -110,9 +110,9 @@ to the delegate.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vP9HIPWebApp9HIPWebApp10initialURLCSo5NSURL"></a>
+                    <a name="/s:vP9HIPWebApp6WebApp10initialURLCSo5NSURL"></a>
                     <a name="//apple_ref/swift/Property/initialURL" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vP9HIPWebApp9HIPWebApp10initialURLCSo5NSURL">initialURL</a>
+                    <a class="token" href="#/s:vP9HIPWebApp6WebApp10initialURLCSo5NSURL">initialURL</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -132,7 +132,7 @@ to the delegate.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L39">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebApp.swift#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -140,9 +140,9 @@ to the delegate.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vP9HIPWebApp9HIPWebApp13appIdentifierSS"></a>
+                    <a name="/s:vP9HIPWebApp6WebApp13appIdentifierSS"></a>
                     <a name="//apple_ref/swift/Property/appIdentifier" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vP9HIPWebApp9HIPWebApp13appIdentifierSS">appIdentifier</a>
+                    <a class="token" href="#/s:vP9HIPWebApp6WebApp13appIdentifierSS">appIdentifier</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -162,7 +162,7 @@ to the delegate.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L42">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebApp.swift#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
