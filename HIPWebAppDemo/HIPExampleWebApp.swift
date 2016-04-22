@@ -8,6 +8,7 @@
 
 import Foundation
 import WebKit
+import HIPWebApp
 
 
 class HIPExampleWebApp: NSObject, HIPWebApp, HIPWebViewReferencing {

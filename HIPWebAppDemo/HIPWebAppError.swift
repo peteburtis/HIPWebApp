@@ -9,7 +9,7 @@
 import Foundation
 
 
-enum HIPWebAppError: ErrorType {
+public enum HIPWebAppError: ErrorType {
     /// handleMessage() may throw this if it can't parse a message body.
     case MessageParseError
 }

@@ -25,7 +25,7 @@ import WebKit
  *  - Arbitrary WKWebView customization that does _not_ include adding UIKit components
  *    (that's handled by HIPWebAppViewController subclasses)
  */
-protocol HIPWebApp {
+public protocol HIPWebApp {
     /// Endpoint where this web app can be reached
     var initialURL: NSURL { get }
 
@@ -35,21 +35,21 @@ protocol HIPWebApp {
 
 
 /// Add conformance to this protocol if your HIPWebApp provides a WKWebViewConfiguration.
-protocol HIPWebAppConfiguring {
+public protocol HIPWebAppConfiguring {
     /// Attach message handlers and user scripts here
     func getWebViewConfiguration() -> WKWebViewConfiguration
 }
 
 
 /// Add conformance to this protocol if your HIPWebApp provides WKNavigationDelegate.
-protocol HIPWebAppNavigating {
+public protocol HIPWebAppNavigating {
     /// Handle or expose navigation events here
     func getWebViewNavigationDelegate() -> WKNavigationDelegate
 }
 
 
 /// Add conformance to this protocol if your HIPWebApp would like a reference to the WKWebView it runs in.
-protocol HIPWebViewReferencing {
+public protocol HIPWebViewReferencing {
     /// Perform any configuration not covered by the other protocol methods
     /// and/or grab a reference to the web view if you want it
     func willRunInWebView(webView: WKWebView) -> ()
@@ -57,7 +57,7 @@ protocol HIPWebViewReferencing {
 
 
 /// Add conformance to this protocol if your HIPWebApp would like to receive webkit.messageHandlers[name].postMessage()s.
-protocol HIPWebAppMessageHandling {
+public protocol HIPWebAppMessageHandling {
     /// You must enumerate the names of the messages you want to receive.
     var supportedMessageNames: [String] { get }
 

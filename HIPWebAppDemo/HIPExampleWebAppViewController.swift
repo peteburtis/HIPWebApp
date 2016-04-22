@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import HIPWebApp
 
 class HIPBasicLogging: HIPWebAppLoggingDelegate {
     func debug(message: String) {

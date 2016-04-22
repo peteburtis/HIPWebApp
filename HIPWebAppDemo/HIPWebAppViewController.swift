@@ -18,12 +18,12 @@ import WebKit
  *  is added to the view hierarchy! If you want to start loading the page before you show it to the user, call that
  *  method.
  */
-class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
+public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     /// HIPWebApp's classes will be silent in the console unless you set this.
-    weak var loggingDelegate: HIPWebAppLoggingDelegate?
+    public weak var loggingDelegate: HIPWebAppLoggingDelegate?
 
-    internal var webView: WKWebView?
-    internal var webApp: HIPWebApp?
+    public var webView: WKWebView?
+    public var webApp: HIPWebApp?
 
     private var _webAppConfiguring: HIPWebAppConfiguring? { return webApp as? HIPWebAppConfiguring }
     private var _webAppNavigating: HIPWebAppNavigating? { return webApp as? HIPWebAppNavigating }
@@ -42,7 +42,7 @@ class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     ///
     /// It's a method rather than a closure passed to init() because complex uses of HIPWebAppViewController should
     /// probably be subclassing it anyway.
-    func createWebApp() -> HIPWebApp? { assert(false, "Must override createWebApp()"); return nil }
+    public func createWebApp() -> HIPWebApp? { assert(false, "Must override createWebApp()"); return nil }
 
     /// Create and configure the WKWebView using the HIPWebApp (don't add it to the view hierarchy yet)
     private func createWebView() -> WKWebView {
@@ -61,7 +61,7 @@ class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     }
 
     /// Create the views and HIPWebApp
-    override func loadView() {
+    override public func loadView() {
         webApp = createWebApp()!
 
         super.loadView()
@@ -82,16 +82,16 @@ class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     }
 
     /// Perform a GET request for the given URL in the web view
-    func loadURL(url: NSURL) {
+    public func loadURL(url: NSURL) {
         webView!.loadRequest(NSURLRequest(URL: url))
     }
 
     /// Make sure the HIPWebApp and WKWebView have been instantiated and configured
-    func ensureWebViewInstantiated() {
+    public func ensureWebViewInstantiated() {
         _ = self.view  // loadView is lazy, and that's where we instantiate the web view
     }
 
-    func userContentController(
+    public func userContentController(
         userContentController: WKUserContentController,
         didReceiveScriptMessage message: WKScriptMessage)
     {
