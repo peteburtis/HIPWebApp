@@ -125,7 +125,6 @@ public class WebAppViewController: UIViewController, WKScriptMessageHandler {
         _ = self.view  // loadView is lazy, and that's where we instantiate the web view
     }
 
-    /// WKScriptMessageHandler implementation
     public func userContentController(
         userContentController: WKUserContentController,
         didReceiveScriptMessage message: WKScriptMessage)
