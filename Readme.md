@@ -17,7 +17,7 @@ The source code comes with a few examples.
 
 ## Usage
 
-First, make a subclass of `WebApp`. The only hard requirements are a string
+First, make a class that implements `WebApp`. The only hard requirements are a string
 identifier for logging (`appIdentifier`) and an initial URL.
 
 ```swift
