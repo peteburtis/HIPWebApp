@@ -12,11 +12,27 @@ import WebKit
 
 
 /**
- *  A HIPWebAppViewController is the canonical way to show HIPWebApps to users.
- *
- *  Important note: unless you call ensureWebViewInstantiated(), the web app is not created until the view controller
- *  is added to the view hierarchy! If you want to start loading the page before you show it to the user, call that
- *  method.
+ A HIPWebAppViewController is the canonical way to show HIPWebApps to users.
+
+ Important note: unless you call ensureWebViewInstantiated(), the web app is not created until the view controller
+ is added to the view hierarchy! If you want to start loading the page before you show it to the user, call that
+ method.
+ 
+ Simplest possible view controller:
+ 
+     class HIPSimplestExampleWebAppViewController: HIPWebAppViewController {
+
+         override func createWebApp() -> HIPWebApp? { return HIPSimplestExampleWebApp() }
+
+         override func viewDidLoad() {
+             // optional:
+             // self.loggingDelegate = myLoggingDelegate
+
+             super.viewDidLoad()
+             self.loadURL(webApp!.initialURL)
+         }
+
+     }
  */
 public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     /// HIPWebApp's classes will be silent in the console unless you set this.

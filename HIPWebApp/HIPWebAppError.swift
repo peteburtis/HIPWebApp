@@ -9,6 +9,7 @@
 import Foundation
 
 
+/// All errors that can be thrown by `HIPWebAppViewController`
 public enum HIPWebAppError: ErrorType {
     /// handleMessage() may throw this if it can't parse a message body.
     case MessageParseError
