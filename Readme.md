@@ -82,3 +82,9 @@ protocols are related.
 
 * [The official `WKWebView` docs](https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/)
 * [`WKWebView` at NSHipster](http://nshipster.com/wkwebkit/)
+
+## Release history
+
+### 1.0
+
+Initial release.
