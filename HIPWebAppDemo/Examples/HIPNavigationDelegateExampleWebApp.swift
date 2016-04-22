@@ -1,6 +1,6 @@
 //
 //  HIPNavigationDelegateExampleWebApp.swift
-//  HIPWebAppDemo
+//  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
 //  Copyright © 2016 Hipmunk, Inc. All rights reserved.
@@ -11,7 +11,7 @@ import WebKit
 import HIPWebApp
 
 
-class HIPNavigationDelegateExampleWebApp: NSObject, HIPWebApp {  // WKNavigationDelegate requires NSObject
+class HIPNavigationDelegateExampleWebApp: NSObject, WebApp {  // WKNavigationDelegate requires NSObject
     var appIdentifier: String { return "navigation-delegate" }
 
     var initialURL: NSURL {
@@ -22,7 +22,7 @@ class HIPNavigationDelegateExampleWebApp: NSObject, HIPWebApp {  // WKNavigation
 }
 
 
-extension HIPNavigationDelegateExampleWebApp: HIPWebAppNavigating {
+extension HIPNavigationDelegateExampleWebApp: WebAppNavigating {
     func getWebViewNavigationDelegate() -> WKNavigationDelegate {
         return self
     }

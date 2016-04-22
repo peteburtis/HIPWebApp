@@ -1,6 +1,6 @@
 //
 //  HIPNavigationDelegateExampleWebAppViewController.swift
-//  HIPWebAppDemo
+//  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
 //  Copyright © 2016 Hipmunk, Inc. All rights reserved.
@@ -10,8 +10,8 @@ import Foundation
 import HIPWebApp
 
 
-class HIPNavigationDelegateExampleWebAppViewController: HIPWebAppViewController {
-    override func createWebApp() -> HIPWebApp? { return HIPNavigationDelegateExampleWebApp() }
+class HIPNavigationDelegateExampleWebAppViewController: WebAppViewController {
+    override func createWebApp() -> WebApp? { return HIPNavigationDelegateExampleWebApp() }
 
     override func viewDidLoad() {
         self.loggingDelegate = BASIC_LOGGING

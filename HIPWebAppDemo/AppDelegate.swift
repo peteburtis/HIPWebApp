@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  HIPWebAppDemo
+//  WebAppDemo
 //
 //  Created by Steve Johnson on 4/6/16.
 //  Copyright © 2016 Hipmunk, Inc. All rights reserved.

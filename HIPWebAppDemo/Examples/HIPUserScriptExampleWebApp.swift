@@ -1,6 +1,6 @@
 //
 //  HIPUserScriptExampleWebApp.swift
-//  HIPWebAppDemo
+//  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
 //  Copyright © 2016 Hipmunk, Inc. All rights reserved.
@@ -11,7 +11,7 @@ import WebKit
 import HIPWebApp
 
 
-class HIPUserScriptExampleWebApp: HIPWebApp {
+class HIPUserScriptExampleWebApp: WebApp {
     var appIdentifier: String { return "user-script" }
 
     var initialURL: NSURL {
@@ -22,7 +22,7 @@ class HIPUserScriptExampleWebApp: HIPWebApp {
 }
 
 
-extension HIPUserScriptExampleWebApp: HIPWebAppConfiguring {
+extension HIPUserScriptExampleWebApp: WebAppConfiguring {
     func getWebViewConfiguration() -> WKWebViewConfiguration {
         let config = WKWebViewConfiguration()
 

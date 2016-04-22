@@ -1,6 +1,6 @@
 //
 //  HIPSimplestExampleWebAppViewController.swift
-//  HIPWebAppDemo
+//  WebAppDemo
 //
 //  Created by Steve Johnson on 4/6/16.
 //  Copyright © 2016 Hipmunk, Inc. All rights reserved.
@@ -10,9 +10,9 @@ import UIKit
 import HIPWebApp
 
 
-class HIPSimplestExampleWebAppViewController: HIPWebAppViewController {
+class HIPSimplestExampleWebAppViewController: WebAppViewController {
 
-    override func createWebApp() -> HIPWebApp? { return HIPSimplestExampleWebApp() }
+    override func createWebApp() -> WebApp? { return HIPSimplestExampleWebApp() }
 
     override func viewDidLoad() {
         self.loggingDelegate = BASIC_LOGGING

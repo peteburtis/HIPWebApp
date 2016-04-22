@@ -10,7 +10,7 @@ import Foundation
 import HIPWebApp
 
 
-class HIPSimplestExampleWebApp: HIPWebApp {
+class HIPSimplestExampleWebApp: WebApp {
     var appIdentifier: String { return "google" }
     var initialURL: NSURL { return NSURL(string: "https://google.com")! }
 }

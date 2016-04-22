@@ -12,7 +12,7 @@ import WebKit
 
 
 /**
- A HIPWebAppViewController is the canonical way to show HIPWebApps to users.
+ A WebAppViewController is the canonical way to show WebApps to users.
 
  Important note: unless you call ensureWebViewInstantiated(), the web app is not created until the view controller
  is added to the view hierarchy! If you want to start loading the page before you show it to the user, call that
@@ -21,13 +21,13 @@ import WebKit
  Simplest possible view controller:
 
  ````swift
- class HIPSimplestExampleWebAppViewController: HIPWebAppViewController {
+ class HIPSimplestExampleWebAppViewController: WebAppViewController {
 
-     override func createWebApp() -> HIPWebApp? { return HIPSimplestExampleWebApp() }
+     override func createWebApp() -> WebApp? { return HIPSimplestExampleWebApp() }
 
      override func viewDidLoad() {
          // optional:
-         // self.loggingDelegate = myLoggingDelegate
+         // self.loggingDelegate = myWebAppViewControllerLoggingDelegate
 
          super.viewDidLoad()
          self.loadURL(webApp!.initialURL)
@@ -36,41 +36,41 @@ import WebKit
  }
  ````
  */
-public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
-    /// HIPWebApp's classes will be silent in the console unless you set this.
-    public weak var loggingDelegate: HIPWebAppLoggingDelegate?
+public class WebAppViewController: UIViewController, WKScriptMessageHandler {
+    /// WebApp's classes will be silent in the console unless you set this.
+    public weak var loggingDelegate: WebAppViewControllerLoggingDelegate?
 
     /// The `WKWebView` instance created by this view controller, if it exists yet
     public var webView: WKWebView?
 
-    /// The `HIPWebApp` instance created by this view controller, if it exists yet
-    public var webApp: HIPWebApp?
+    /// The `WebApp` instance created by this view controller, if it exists yet
+    public var webApp: WebApp?
 
-    private var _webAppConfiguring: HIPWebAppConfiguring? { return webApp as? HIPWebAppConfiguring }
-    private var _webAppNavigating: HIPWebAppNavigating? { return webApp as? HIPWebAppNavigating }
-    private var _webViewReferencing: HIPWebAppWebViewReferencing? { return webApp as? HIPWebAppWebViewReferencing }
-    private var _webViewMessageHandling: HIPWebAppMessageHandling? { return webApp as? HIPWebAppMessageHandling }
+    private var _webAppConfiguring: WebAppConfiguring? { return webApp as? WebAppConfiguring }
+    private var _webAppNavigating: WebAppNavigating? { return webApp as? WebAppNavigating }
+    private var _webViewReferencing: WebAppWebViewReferencing? { return webApp as? WebAppWebViewReferencing }
+    private var _webViewMessageHandling: WebAppMessageHandling? { return webApp as? WebAppMessageHandling }
 
     /// The web view will be added as a subview of this, sharing its constraints. Defaults to `self.view`.
     @IBOutlet private var webViewContainer: UIView?
 
-    /// HIPWebApp creates the navigation delegate, but we store it here so that every HIPWebApp doesn't have to remember
+    /// WebApp creates the navigation delegate, but we store it here so that every WebApp doesn't have to remember
     /// to do so (it's a weak ref on the web view).
     private var webViewNavigationDelegate: WKNavigationDelegate?
 
-    /// Subclasses must return a HIPWebApp instance from this method. Unless you're doing something sophisticated, the
-    /// HIPWebApp instance should generally not be created until this method is called, since the view may not be visible
+    /// Subclasses must return a WebApp instance from this method. Unless you're doing something sophisticated, the
+    /// WebApp instance should generally not be created until this method is called, since the view may not be visible
     /// yet and we want to minimize memory usage.
     ///
-    /// It's a method rather than a closure passed to init() because complex uses of HIPWebAppViewController should
+    /// It's a method rather than a closure passed to init() because complex uses of WebAppViewController should
     /// probably be subclassing it anyway.
-    public func createWebApp() -> HIPWebApp? { assert(false, "Must override createWebApp()"); return nil }
+    public func createWebApp() -> WebApp? { assert(false, "Must override createWebApp()"); return nil }
 
-    /// Create and configure the WKWebView using the HIPWebApp (don't add it to the view hierarchy yet)
+    /// Create and configure the WKWebView using the WebApp (don't add it to the view hierarchy yet)
     private func createWebView() -> WKWebView {
         let configuration: WKWebViewConfiguration = _webAppConfiguring?.getWebViewConfiguration() ?? WKWebViewConfiguration()
 
-        // HIPWebApp automatically conforms to WKScriptMessageHandler
+        // WebApp automatically conforms to WKScriptMessageHandler
         for messageName in _webViewMessageHandling?.supportedMessageNames ?? [] {
             configuration.userContentController.addScriptMessageHandler(self, name: messageName)
         }
@@ -82,7 +82,7 @@ public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
         return _webView
     }
 
-    /// Create the views and HIPWebApp
+    /// Create the views and WebApp
     override public func loadView() {
         webApp = createWebApp()!
 
@@ -111,7 +111,7 @@ public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
         webView!.loadRequest(NSURLRequest(URL: url))
     }
 
-    /// Make sure the HIPWebApp and WKWebView have been instantiated and configured
+    /// Make sure the WebApp and WKWebView have been instantiated and configured
     public func ensureWebViewInstantiated() {
         _ = self.view  // loadView is lazy, and that's where we instantiate the web view
     }

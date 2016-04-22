@@ -1,6 +1,6 @@
 //
 //  HIPMessageHandlingExampleWebAppViewController.swift
-//  HIPWebAppDemo
+//  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
 //  Copyright © 2016 Hipmunk, Inc. All rights reserved.
@@ -10,12 +10,12 @@ import Foundation
 import HIPWebApp
 
 
-class HIPMessageHandlingExampleWebAppViewController: HIPWebAppViewController, HIPMessageHandlingExampleWebAppDelegate {
+class HIPMessageHandlingExampleWebAppViewController: WebAppViewController, HIPMessageHandlingExampleWebAppDelegate {
 
     /// Convenience cast to expected web app class
     private var _messageHandlingWebApp: HIPMessageHandlingExampleWebApp? { return webApp as? HIPMessageHandlingExampleWebApp }
 
-    override func createWebApp() -> HIPWebApp? {
+    override func createWebApp() -> WebApp? {
         let webApp = HIPMessageHandlingExampleWebApp()
         webApp.delegate = self
         return webApp

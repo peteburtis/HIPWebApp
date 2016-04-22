@@ -1,5 +1,5 @@
 //
-//  HIPWebAppError.swift
+//  WebAppError.swift
 //  Hipmunk
 //
 //  Created by Steve Johnson on 3/30/16.
@@ -9,8 +9,8 @@
 import Foundation
 
 
-/// All errors that can be thrown by `HIPWebAppViewController`
-public enum HIPWebAppError: ErrorType {
+/// All errors that can be thrown by `WebAppViewController`
+public enum WebAppError: ErrorType {
     /// handleMessage() may throw this if it can't parse a message body.
     case MessageParseError
 }

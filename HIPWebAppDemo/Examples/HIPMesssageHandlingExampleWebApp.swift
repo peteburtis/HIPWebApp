@@ -1,6 +1,6 @@
 //
 //  HIPMesssageHandlingExampleWebApp.swift
-//  HIPWebAppDemo
+//  WebAppDemo
 //
 //  Created by Steve Johnson on 4/22/16.
 //  Copyright © 2016 Hipmunk, Inc. All rights reserved.
@@ -17,7 +17,7 @@ protocol HIPMessageHandlingExampleWebAppDelegate: class {
 }
 
 
-class HIPMessageHandlingExampleWebApp: HIPWebApp {
+class HIPMessageHandlingExampleWebApp: WebApp {
     /// Included in log messages
     var appIdentifier: String { return "message-handling" }
 
@@ -41,7 +41,7 @@ extension HIPMessageHandlingExampleWebApp {
 
 
 //MARK: Grab a reference to the web view
-extension HIPMessageHandlingExampleWebApp: HIPWebAppWebViewReferencing {
+extension HIPMessageHandlingExampleWebApp: WebAppWebViewReferencing {
     func willRunInWebView(webView: WKWebView) {
         self.webView = webView
     }
@@ -49,7 +49,7 @@ extension HIPMessageHandlingExampleWebApp: HIPWebAppWebViewReferencing {
 
 
 //MARK: Handle WKWebView messages
-extension HIPMessageHandlingExampleWebApp: HIPWebAppMessageHandling {
+extension HIPMessageHandlingExampleWebApp: WebAppMessageHandling {
     var supportedMessageNames: [String] { return ["BUTTON_CLICKED"] }
 
     func handleMessage(name: String, _ body: AnyObject) -> Bool {
