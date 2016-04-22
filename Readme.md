@@ -76,7 +76,7 @@ See `HIPWebApp/WebApp.swift` and `HIPWebAppDemo/Examples` for details.
 Here is a potentially helpful diagram about how the different classes and
 protocols are related.
 
-![class diagram](class_diagram.png)
+![class diagram](doc_assets/class_diagram.png)
 
 ## Further reading
 
