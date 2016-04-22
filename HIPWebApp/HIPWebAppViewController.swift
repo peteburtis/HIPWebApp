@@ -30,6 +30,7 @@ public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     private var _webViewReferencing: HIPWebAppWebViewReferencing? { return webApp as? HIPWebAppWebViewReferencing }
     private var _webViewMessageHandling: HIPWebAppMessageHandling? { return webApp as? HIPWebAppMessageHandling }
 
+    /// The web view will be added as a subview of this, sharing its constraints. Defaults to `self.view`.
     @IBOutlet private var webViewContainer: UIView?
 
     /// HIPWebApp creates the navigation delegate, but we store it here so that every HIPWebApp doesn't have to remember
@@ -71,6 +72,9 @@ public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
         _webViewReferencing?.willRunInWebView(webView)
         // don't let it create its own autolayout rules
         webView.translatesAutoresizingMaskIntoConstraints = false
+
+        webViewContainer = webViewContainer ?? self.view
+
         webViewContainer!.insertSubview(webView, atIndex: 0)  // put it under everything so you can add chrome
 
         webViewContainer!.addConstraints(

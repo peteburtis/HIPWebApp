@@ -126,9 +126,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="300"/>
-                    <connections>
-                        <outlet property="webViewContainer" destination="reW-OO-D5S" id="jxu-eq-IIa"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cw8-Cd-ipJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -151,9 +148,6 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="300" height="300"/>
-                    <connections>
-                        <outlet property="webViewContainer" destination="dJE-fv-iVi" id="rYO-xg-wCR"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="alB-C2-OO3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

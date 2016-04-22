@@ -12,9 +12,7 @@ import HIPWebApp
 
 class HIPSimplestExampleWebAppViewController: HIPWebAppViewController {
 
-    override func createWebApp() -> HIPWebApp? {
-        return HIPSimplestExampleWebApp()
-    }
+    override func createWebApp() -> HIPWebApp? { return HIPSimplestExampleWebApp() }
 
     override func viewDidLoad() {
         self.loggingDelegate = BASIC_LOGGING
@@ -23,5 +21,5 @@ class HIPSimplestExampleWebAppViewController: HIPWebAppViewController {
 
         self.loadURL(webApp!.initialURL)
     }
-}
 
+}
