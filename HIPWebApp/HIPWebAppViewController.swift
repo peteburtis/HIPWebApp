@@ -97,15 +97,16 @@ public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     {
         if let supportedMessageNames = _webViewMessageHandling?.supportedMessageNames {
             guard supportedMessageNames.contains(message.name) else {
-                loggingDelegate?.error("Unknown message: \(message.name)")  // totally non-fatal to the app but certainly unexpected
+                // totally non-fatal to the app but certainly unexpected
+                loggingDelegate?.error("\(webApp!.appIdentifier): Unknown message: \(message.name)")
                 return
             }
         }
 
-        loggingDelegate?.debug("Received message: \(message.name)")
+        loggingDelegate?.debug("\(webApp!.appIdentifier): Received message: \(message.name)")
 
         if _webViewMessageHandling?.handleMessage(message.name, message.body) == false {
-            loggingDelegate?.error("Could not parse contents of message \(message.name): \(message.body)")
+            loggingDelegate?.error("\(webApp!.appIdentifier): Could not parse contents of message \(message.name): \(message.body)")
         }
     }
 }
