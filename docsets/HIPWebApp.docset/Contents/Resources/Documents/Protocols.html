@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Protocols  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="Protocols  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">HIPWebApp Docs</a> (88% documented)</p>
+        <p class="header-right"><a href="https://github.com/Hipmunk/HIPWebApp"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fhipmunk%2Egithub%2Ecom%2Fdocsets%2FHIPWebApp%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">HIPWebApp Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Protocols  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/HIPWebAppViewController.html">HIPWebAppViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/HIPWebAppError.html">HIPWebAppError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/HIPWebApp.html">HIPWebApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HIPWebAppConfiguring.html">HIPWebAppConfiguring</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HIPWebAppLoggingDelegate.html">HIPWebAppLoggingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HIPWebAppMessageHandling.html">HIPWebAppMessageHandling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HIPWebAppNavigating.html">HIPWebAppNavigating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/HIPWebAppWebViewReferencing.html">HIPWebAppWebViewReferencing</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Protocols</h1>
+            <p>The following protocols are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9HIPWebApp24HIPWebAppLoggingDelegate"></a>
+                    <a name="//apple_ref/swift/Protocol/HIPWebAppLoggingDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9HIPWebApp24HIPWebAppLoggingDelegate">HIPWebAppLoggingDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If you would like <code><a href="Classes/HIPWebAppViewController.html">HIPWebAppViewController</a></code> to log debug and error information, implement this protocol in a class
+and set <code>myWebAppViewController.loggingDelegate</code> to it.</p>
+
+                        <a href="Protocols/HIPWebAppLoggingDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebAppLoggingDelegate</span><span class="p">:</span> <span class="kd">class</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppLoggingDelegate.swift#L16-L25">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9HIPWebApp9HIPWebApp"></a>
+                    <a name="//apple_ref/swift/Protocol/HIPWebApp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9HIPWebApp9HIPWebApp">HIPWebApp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A <code>HIPWebApp</code> is an HTTP[S]-accessible location and a string identifier for logging. Optionally, it can also:</p>
+
+<ul>
+<li>Store a reference to the <code>WKWebView</code> that hosts it</li>
+<li>Provide a <code>WKWebViewConfiguration</code></li>
+<li>Provide a <code>WKWebViewNavigationDelegate</code></li>
+<li>Listen to <code>webkit.messageHandlers[name].postMessage(body)</code> calls</li>
+</ul>
+
+<p>To support these features, have a look at the other protocols starting with <code>HIPWebApp*</code>.</p>
+
+<p>Conceptually, a <code>HIPWebApp</code> represents your web application in native app code. It has sole responsibility for calling
+JavaScript in the page and receiving messages. A common pattern is to define a delegate and pass on messages as calls
+to the delegate.</p>
+
+<p>Simplest possible web app:</p>
+
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">HIPSimplestExampleWebApp</span><span class="p">:</span> <span class="kt">HIPWebApp</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">appIdentifier</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">return</span> <span class="s">"google"</span> <span class="p">}</span>
+    <span class="k">var</span> <span class="nv">initialURL</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://google.com"</span><span class="p">)</span><span class="o">!</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+                        <a href="Protocols/HIPWebApp.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebApp</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L37-L43">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9HIPWebApp20HIPWebAppConfiguring"></a>
+                    <a name="//apple_ref/swift/Protocol/HIPWebAppConfiguring" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9HIPWebApp20HIPWebAppConfiguring">HIPWebAppConfiguring</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add conformance to this protocol if your HIPWebApp provides a <code>WKWebViewConfiguration</code>.</p>
+
+                        <a href="Protocols/HIPWebAppConfiguring.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebAppConfiguring</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L47-L50">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9HIPWebApp19HIPWebAppNavigating"></a>
+                    <a name="//apple_ref/swift/Protocol/HIPWebAppNavigating" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9HIPWebApp19HIPWebAppNavigating">HIPWebAppNavigating</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add conformance to this protocol if your HIPWebApp provides <code>WKNavigationDelegate</code>.</p>
+
+                        <a href="Protocols/HIPWebAppNavigating.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebAppNavigating</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L54-L57">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9HIPWebApp27HIPWebAppWebViewReferencing"></a>
+                    <a name="//apple_ref/swift/Protocol/HIPWebAppWebViewReferencing" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9HIPWebApp27HIPWebAppWebViewReferencing">HIPWebAppWebViewReferencing</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add conformance to this protocol if your <code><a href="Protocols/HIPWebApp.html">HIPWebApp</a></code> would like a reference to the <code>WKWebView</code> it runs in.</p>
+
+                        <a href="Protocols/HIPWebAppWebViewReferencing.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebAppWebViewReferencing</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L61-L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P9HIPWebApp24HIPWebAppMessageHandling"></a>
+                    <a name="//apple_ref/swift/Protocol/HIPWebAppMessageHandling" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P9HIPWebApp24HIPWebAppMessageHandling">HIPWebAppMessageHandling</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Add conformance to this protocol if your <code><a href="Protocols/HIPWebApp.html">HIPWebApp</a></code> would like to listen to calls to
+<code>webkit.messageHandlers[name].postMessage()</code>.</p>
+
+                        <a href="Protocols/HIPWebAppMessageHandling.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebAppMessageHandling</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L70-L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://hipmunk.com" target="_blank" rel="external">Hipmunk</a>. All rights reserved. (Last updated: 2016-04-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

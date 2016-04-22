@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HIPWebAppViewController Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/HIPWebAppViewController" class="dashAnchor"></a>
+    <a title="HIPWebAppViewController Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HIPWebApp Docs</a> (88% documented)</p>
+        <p class="header-right"><a href="https://github.com/Hipmunk/HIPWebApp"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fhipmunk%2Egithub%2Ecom%2Fdocsets%2FHIPWebApp%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HIPWebApp Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HIPWebAppViewController Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/HIPWebAppViewController.html">HIPWebAppViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HIPWebAppError.html">HIPWebAppError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebApp.html">HIPWebApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppConfiguring.html">HIPWebAppConfiguring</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppLoggingDelegate.html">HIPWebAppLoggingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppMessageHandling.html">HIPWebAppMessageHandling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppNavigating.html">HIPWebAppNavigating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppWebViewReferencing.html">HIPWebAppWebViewReferencing</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HIPWebAppViewController</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HIPWebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+
+                </div>
+              </div>
+            <p>A HIPWebAppViewController is the canonical way to show HIPWebApps to users.</p>
+
+<p>Important note: unless you call ensureWebViewInstantiated(), the web app is not created until the view controller
+is added to the view hierarchy! If you want to start loading the page before you show it to the user, call that
+method.</p>
+
+<p>Simplest possible view controller:</p>
+
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">HIPSimplestExampleWebAppViewController</span><span class="p">:</span> <span class="kt">HIPWebAppViewController</span> <span class="p">{</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">HIPWebApp</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">HIPSimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
+
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// optional:</span>
+        <span class="c1">// self.loggingDelegate = myLoggingDelegate</span>
+
+        <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">loadURL</span><span class="p">(</span><span class="n">webApp</span><span class="o">!.</span><span class="n">initialURL</span><span class="p">)</span>
+    <span class="p">}</span>
+
+<span class="p">}</span>
+</code></pre>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9HIPWebApp23HIPWebAppViewController15loggingDelegateXwGSqPS_24HIPWebAppLoggingDelegate__"></a>
+                    <a name="//apple_ref/swift/Property/loggingDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9HIPWebApp23HIPWebAppViewController15loggingDelegateXwGSqPS_24HIPWebAppLoggingDelegate__">loggingDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>HIPWebApp&rsquo;s classes will be silent in the console unless you set this.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">loggingDelegate</span><span class="p">:</span> <span class="kt">HIPWebAppLoggingDelegate</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L41">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9HIPWebApp23HIPWebAppViewController7webViewGSqCSo9WKWebView_"></a>
+                    <a name="//apple_ref/swift/Property/webView" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9HIPWebApp23HIPWebAppViewController7webViewGSqCSo9WKWebView_">webView</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HIPWebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L0">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9HIPWebApp23HIPWebAppViewController6webAppGSqPS_9HIPWebApp__"></a>
+                    <a name="//apple_ref/swift/Property/webApp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9HIPWebApp23HIPWebAppViewController6webAppGSqPS_9HIPWebApp__">webApp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HIPWebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L0">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9HIPWebApp23HIPWebAppViewController12createWebAppFT_GSqPS_9HIPWebApp__"></a>
+                    <a name="//apple_ref/swift/Method/createWebApp()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9HIPWebApp23HIPWebAppViewController12createWebAppFT_GSqPS_9HIPWebApp__">createWebApp()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Subclasses must return a HIPWebApp instance from this method. Unless you&rsquo;re doing something sophisticated, the
+HIPWebApp instance should generally not be created until this method is called, since the view may not be visible
+yet and we want to minimize memory usage.</p>
+
+<p>It&rsquo;s a method rather than a closure passed to init() because complex uses of HIPWebAppViewController should
+probably be subclassing it anyway.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">HIPWebApp</span><span class="p">?</span> <span class="p">{</span> <span class="nf">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="s">"Must override createWebApp()"</span><span class="p">);</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L64">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9HIPWebApp23HIPWebAppViewController8loadViewFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/loadView()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9HIPWebApp23HIPWebAppViewController8loadViewFT_T_">loadView()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create the views and HIPWebApp</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadView</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L83-L104">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9HIPWebApp23HIPWebAppViewController7loadURLFCSo5NSURLT_"></a>
+                    <a name="//apple_ref/swift/Method/loadURL(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9HIPWebApp23HIPWebAppViewController7loadURLFCSo5NSURLT_">loadURL(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Perform a GET request for the given URL in the web view</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadURL</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L107-L109">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9HIPWebApp23HIPWebAppViewController25ensureWebViewInstantiatedFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/ensureWebViewInstantiated()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9HIPWebApp23HIPWebAppViewController25ensureWebViewInstantiatedFT_T_">ensureWebViewInstantiated()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Make sure the HIPWebApp and WKWebView have been instantiated and configured</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ensureWebViewInstantiated</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L112-L114">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9HIPWebApp23HIPWebAppViewController21userContentControllerFTCSo23WKUserContentController23didReceiveScriptMessageCSo15WKScriptMessage_T_"></a>
+                    <a name="//apple_ref/swift/Method/userContentController(_:didReceiveScriptMessage:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9HIPWebApp23HIPWebAppViewController21userContentControllerFTCSo23WKUserContentController23didReceiveScriptMessageCSo15WKScriptMessage_T_">userContentController(_:didReceiveScriptMessage:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HIPWebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L116-L133">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://hipmunk.com" target="_blank" rel="external">Hipmunk</a>. All rights reserved. (Last updated: 2016-04-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

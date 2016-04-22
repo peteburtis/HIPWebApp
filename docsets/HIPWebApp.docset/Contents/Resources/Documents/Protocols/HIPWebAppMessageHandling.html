@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>HIPWebAppMessageHandling Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Protocol/HIPWebAppMessageHandling" class="dashAnchor"></a>
+    <a title="HIPWebAppMessageHandling Protocol Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">HIPWebApp Docs</a> (88% documented)</p>
+        <p class="header-right"><a href="https://github.com/Hipmunk/HIPWebApp"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fhipmunk%2Egithub%2Ecom%2Fdocsets%2FHIPWebApp%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">HIPWebApp Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        HIPWebAppMessageHandling Protocol Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/HIPWebAppViewController.html">HIPWebAppViewController</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/HIPWebAppError.html">HIPWebAppError</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebApp.html">HIPWebApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppConfiguring.html">HIPWebAppConfiguring</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppLoggingDelegate.html">HIPWebAppLoggingDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppMessageHandling.html">HIPWebAppMessageHandling</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppNavigating.html">HIPWebAppNavigating</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/HIPWebAppWebViewReferencing.html">HIPWebAppWebViewReferencing</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>HIPWebAppMessageHandling</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">HIPWebAppMessageHandling</span></code></pre>
+
+                </div>
+              </div>
+            <p>Add conformance to this protocol if your <code><a href="../Protocols/HIPWebApp.html">HIPWebApp</a></code> would like to listen to calls to
+<code>webkit.messageHandlers[name].postMessage()</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vP9HIPWebApp24HIPWebAppMessageHandling21supportedMessageNamesGSaSS_"></a>
+                    <a name="//apple_ref/swift/Property/supportedMessageNames" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vP9HIPWebApp24HIPWebAppMessageHandling21supportedMessageNamesGSaSS_">supportedMessageNames</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>You must enumerate the names of the messages you want to receive.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">supportedMessageNames</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L72">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FP9HIPWebApp24HIPWebAppMessageHandling13handleMessageFTSSPs9AnyObject__Sb"></a>
+                    <a name="//apple_ref/swift/Method/handleMessage(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FP9HIPWebApp24HIPWebAppMessageHandling13handleMessageFTSSPs9AnyObject__Sb">handleMessage(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The web page has called messageHandlers[name].postMessage(body)</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">handleMessage</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">body</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebApp.swift#L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2016 <a class="link" href="https://hipmunk.com" target="_blank" rel="external">Hipmunk</a>. All rights reserved. (Last updated: 2016-04-22)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
