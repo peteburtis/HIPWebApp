@@ -107,6 +107,7 @@ public class WebAppViewController: UIViewController, WKScriptMessageHandler {
                 "V:|[webView]|", options: [], metrics: nil, views: ["webView": webView]))
     }
 
+    /// Load the initial URL specified in the web app. You'll probably want to call this from `viewDidLoad()`.
     public func loadWebAppInitialURL() {
         guard let webApp = webApp else {
             assertionFailure("Can't load web app's initial URL because we don't have one yet")
@@ -115,8 +116,7 @@ public class WebAppViewController: UIViewController, WKScriptMessageHandler {
         loadURL(webApp.initialURL)
     }
 
-    /// Perform a GET request for the given URL in the web view
-    public func loadURL(url: NSURL) {
+    internal func loadURL(url: NSURL) {
         webView!.loadRequest(NSURLRequest(URL: url))
     }
 

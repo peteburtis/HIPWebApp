@@ -12,6 +12,7 @@ docs:
 		--github-file-prefix https://github.com/Hipmunk/HIPWebApp/tree/master \
 		--module HIPWebApp \
 		--module-version 1.0 \
+		--skip-undocumented \
 		--root-url https://hipmunk.github.com/HIPWebApp 
 	cp -r doc_assets docs/
 
