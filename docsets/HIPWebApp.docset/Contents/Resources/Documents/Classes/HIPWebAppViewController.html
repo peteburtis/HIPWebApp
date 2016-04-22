@@ -14,7 +14,7 @@
     <a title="HIPWebAppViewController Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">HIPWebApp Docs</a> (88% documented)</p>
+        <p><a href="../index.html">HIPWebApp Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/Hipmunk/HIPWebApp"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fhipmunk%2Egithub%2Ecom%2Fdocsets%2FHIPWebApp%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -150,19 +150,19 @@ method.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The <code>WKWebView</code> instance created by this view controller, if it exists yet</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HIPWebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">webView</span><span class="p">:</span> <span class="kt">WKWebView</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -180,19 +180,19 @@ method.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The <code><a href="../Protocols/HIPWebApp.html">HIPWebApp</a></code> instance created by this view controller, if it exists yet</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HIPWebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">webApp</span><span class="p">:</span> <span class="kt">HIPWebApp</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L0">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -227,7 +227,7 @@ probably be subclassing it anyway.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L64">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -257,7 +257,7 @@ probably be subclassing it anyway.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L83-L104">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L86-L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +287,7 @@ probably be subclassing it anyway.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L107-L109">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L110-L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -317,7 +317,7 @@ probably be subclassing it anyway.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L112-L114">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L115-L117">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -335,19 +335,21 @@ probably be subclassing it anyway.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>WKScriptMessageHandler implementation</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">HIPWebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">userContentController</span><span class="p">(</span>
+        <span class="nv">userContentController</span><span class="p">:</span> <span class="kt">WKUserContentController</span><span class="p">,</span>
+        <span class="n">didReceiveScriptMessage</span> <span class="nv">message</span><span class="p">:</span> <span class="kt">WKScriptMessage</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L116-L133">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/HIPWebAppViewController.swift#L120-L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
