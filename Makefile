@@ -1,4 +1,12 @@
-.PHONY: docs
+.PHONY: docs deploy-docs
+
+deploy-docs:
+	# first, pip install ghp-import
+	ghp-import docs \
+		-n -p \
+		-m "Update docs" \
+		-r origin \
+		-b gh-pages
 
 docs:
 	# first, gem install jazzy

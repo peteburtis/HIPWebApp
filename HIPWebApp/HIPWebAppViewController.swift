@@ -19,20 +19,22 @@ import WebKit
  method.
  
  Simplest possible view controller:
- 
-     class HIPSimplestExampleWebAppViewController: HIPWebAppViewController {
 
-         override func createWebApp() -> HIPWebApp? { return HIPSimplestExampleWebApp() }
+ ````swift
+ class HIPSimplestExampleWebAppViewController: HIPWebAppViewController {
 
-         override func viewDidLoad() {
-             // optional:
-             // self.loggingDelegate = myLoggingDelegate
+     override func createWebApp() -> HIPWebApp? { return HIPSimplestExampleWebApp() }
 
-             super.viewDidLoad()
-             self.loadURL(webApp!.initialURL)
-         }
+     override func viewDidLoad() {
+         // optional:
+         // self.loggingDelegate = myLoggingDelegate
 
+         super.viewDidLoad()
+         self.loadURL(webApp!.initialURL)
      }
+
+ }
+ ````
  */
 public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     /// HIPWebApp's classes will be silent in the console unless you set this.

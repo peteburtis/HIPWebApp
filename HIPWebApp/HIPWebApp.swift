@@ -26,10 +26,12 @@ import WebKit
  
  Simplest possible web app:
  
-     class HIPSimplestExampleWebApp: HIPWebApp {
-         var appIdentifier: String { return "google" }
-         var initialURL: NSURL { return NSURL(string: "https://google.com")! }
-     }
+ ````swift
+ class HIPSimplestExampleWebApp: HIPWebApp {
+     var appIdentifier: String { return "google" }
+     var initialURL: NSURL { return NSURL(string: "https://google.com")! }
+ }
+ ````
 
  */
 public protocol HIPWebApp {
