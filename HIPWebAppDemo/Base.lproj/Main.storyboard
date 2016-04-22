@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--The Google-->
+        <!--Simple web page-->
         <scene sceneID="SAS-oU-M6q">
             <objects>
                 <viewController id="YWn-Qi-IlS" customClass="HIPSimplestExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="The Google" id="OhO-dO-TJQ"/>
+                    <navigationItem key="navigationItem" title="Simple web page" id="OhO-dO-TJQ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="webViewContainer" destination="Z6N-ld-kXJ" id="B5R-AQ-6WQ"/>
@@ -28,6 +28,74 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mtk-8B-dTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2098" y="-93"/>
+        </scene>
+        <!--Message passing-->
+        <scene sceneID="RF5-Xu-frQ">
+            <objects>
+                <viewController id="CBA-9W-OlX" customClass="HIPMessageHandlingExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UDS-g3-RY3"/>
+                        <viewControllerLayoutGuide type="bottom" id="LdW-SD-bLc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FDe-rI-gbS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yys-lf-Hvg">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem title="Button color: " id="zob-Lu-yji">
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="m9Q-3z-GCX">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pOu-iG-MMA">
+                                            <rect key="frame" x="133" y="7" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Red"/>
+                                            <connections>
+                                                <action selector="redAction:" destination="CBA-9W-OlX" eventType="touchUpInside" id="T3d-11-OMM"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="Ush-m8-da6">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JTw-vW-Qpl">
+                                            <rect key="frame" x="173" y="7" width="42" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Green"/>
+                                            <connections>
+                                                <action selector="greenAction:" destination="CBA-9W-OlX" eventType="touchUpInside" id="Cw4-iC-CeD"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" id="4kq-BW-CzB">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6py-UF-whH">
+                                            <rect key="frame" x="225" y="7" width="31" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Blue"/>
+                                            <connections>
+                                                <action selector="blueAction:" destination="CBA-9W-OlX" eventType="touchUpInside" id="P7J-ts-hUt"/>
+                                            </connections>
+                                        </button>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Yys-lf-Hvg" secondAttribute="trailing" id="AnU-SR-0t1"/>
+                            <constraint firstItem="LdW-SD-bLc" firstAttribute="top" secondItem="Yys-lf-Hvg" secondAttribute="bottom" id="TvQ-cz-Xex"/>
+                            <constraint firstItem="Yys-lf-Hvg" firstAttribute="leading" secondItem="FDe-rI-gbS" secondAttribute="leading" id="lqq-Qh-mbg"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Message passing" id="4ld-W0-Ywl"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="webViewContainer" destination="FDe-rI-gbS" id="3KT-sY-w2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DM2-bg-qTD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098" y="562"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OGS-LE-KPD">
@@ -66,11 +134,20 @@
                                     <segue destination="YWn-Qi-IlS" kind="show" id="rrM-Ml-3S2"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Efi-M8-wth">
+                                <rect key="frame" x="20" y="102" width="125" height="30"/>
+                                <state key="normal" title="Message handling"/>
+                                <connections>
+                                    <segue destination="CBA-9W-OlX" kind="show" id="w56-5p-utf"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WC4-Yx-dIm" firstAttribute="leading" secondItem="h9u-Wn-IKY" secondAttribute="leadingMargin" id="Fvr-rs-wyC"/>
                             <constraint firstItem="WC4-Yx-dIm" firstAttribute="top" secondItem="Xsu-4X-L51" secondAttribute="bottom" id="QJD-LB-yHR"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="Efi-M8-wth" secondAttribute="leading" id="hSF-XB-Hnm"/>
+                            <constraint firstItem="Efi-M8-wth" firstAttribute="top" secondItem="WC4-Yx-dIm" secondAttribute="bottom" constant="8" id="rtN-JI-mF5"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Examples" id="r4V-C5-u1R"/>

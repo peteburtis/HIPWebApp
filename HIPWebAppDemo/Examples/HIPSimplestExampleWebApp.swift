@@ -11,13 +11,7 @@ import WebKit
 import HIPWebApp
 
 
-class HIPSimplestExampleWebApp: NSObject, HIPWebApp, HIPWebViewReferencing {
+class HIPSimplestExampleWebApp: NSObject, HIPWebApp {
     var appIdentifier: String { return "google" }
     var initialURL: NSURL { return NSURL(string: "https://google.com")! }
-
-    weak var webView: WKWebView? = nil
-
-    func willRunInWebView(webView: WKWebView) {
-        self.webView = webView
-    }
 }

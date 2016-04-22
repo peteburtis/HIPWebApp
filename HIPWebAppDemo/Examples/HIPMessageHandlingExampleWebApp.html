@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            #button {
+                font-size: 24px;
+                color: purple;
+                text-decoration: underline;
+            }
+        </style>
+    </head>
+    <body>
+        <a id="button">Tap me to log a message in the Xcode console</div>
+
+        <script>
+            window.containerAPI = {
+                changeButtonColor: function(newColor) {
+                    console.log("Handling message changeButtonColor(" + newColor + ")");
+                    document.getElementById("button").style.color = newColor;
+                }
+            };
+
+            document.getElementById("button").onclick = function(e) {
+                e.preventDefault();
+                window.webkit.messageHandlers.BUTTON_CLICKED.postMessage({x: 1});
+            }
+        </script>
+    </body>
+</html>

@@ -22,6 +22,9 @@
 		F295D10C1CCA91430097C30A /* HIPWebAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1081CCA91430097C30A /* HIPWebAppError.swift */; };
 		F295D10D1CCA91430097C30A /* HIPWebAppLoggingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1091CCA91430097C30A /* HIPWebAppLoggingDelegate.swift */; };
 		F295D10E1CCA91430097C30A /* HIPWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D10A1CCA91430097C30A /* HIPWebAppViewController.swift */; };
+		F295D1111CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1101CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift */; };
+		F295D1131CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1121CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift */; };
+		F295D1151CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D1141CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +69,9 @@
 		F295D1081CCA91430097C30A /* HIPWebAppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPWebAppError.swift; sourceTree = "<group>"; };
 		F295D1091CCA91430097C30A /* HIPWebAppLoggingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPWebAppLoggingDelegate.swift; sourceTree = "<group>"; };
 		F295D10A1CCA91430097C30A /* HIPWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPWebAppViewController.swift; sourceTree = "<group>"; };
+		F295D1101CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPMesssageHandlingExampleWebApp.swift; path = Examples/HIPMesssageHandlingExampleWebApp.swift; sourceTree = "<group>"; };
+		F295D1121CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = HIPMessageHandlingExampleWebAppViewController.swift; path = Examples/HIPMessageHandlingExampleWebAppViewController.swift; sourceTree = "<group>"; };
+		F295D1141CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = HIPMessageHandlingExampleWebApp.html; path = Examples/HIPMessageHandlingExampleWebApp.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,9 +114,9 @@
 		F2311F111CB5853F004F0815 /* HIPWebAppDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F2311F161CB5853F004F0815 /* Main.storyboard */,
 				F2DD53D31CB589F10091B213 /* Examples */,
 				F2311F121CB5853F004F0815 /* AppDelegate.swift */,
-				F2311F161CB5853F004F0815 /* Main.storyboard */,
 				F2311F191CB5853F004F0815 /* Assets.xcassets */,
 				F2311F1B1CB5853F004F0815 /* LaunchScreen.storyboard */,
 				F2311F1E1CB5853F004F0815 /* Info.plist */,
@@ -139,6 +145,16 @@
 			name = Simplest;
 			sourceTree = "<group>";
 		};
+		F295D10F1CCA91880097C30A /* Message handling */ = {
+			isa = PBXGroup;
+			children = (
+				F295D1101CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift */,
+				F295D1121CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift */,
+				F295D1141CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html */,
+			);
+			name = "Message handling";
+			sourceTree = "<group>";
+		};
 		F2DD53D11CB589D80091B213 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				F295D0FC1CCA8F780097C30A /* Simplest */,
+				F295D10F1CCA91880097C30A /* Message handling */,
 				F2DD53D11CB589D80091B213 /* Utils */,
 			);
 			name = Examples;
@@ -251,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2311F1D1CB5853F004F0815 /* LaunchScreen.storyboard in Resources */,
+				F295D1151CCA924A0097C30A /* HIPMessageHandlingExampleWebApp.html in Resources */,
 				F2311F1A1CB5853F004F0815 /* Assets.xcassets in Resources */,
 				F2311F181CB5853F004F0815 /* Main.storyboard in Resources */,
 			);
@@ -271,7 +289,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F295D1041CCA91350097C30A /* HIPBasicLogging.swift in Sources */,
+				F295D1111CCA91F00097C30A /* HIPMesssageHandlingExampleWebApp.swift in Sources */,
 				F295D1051CCA91350097C30A /* JSUtil.swift in Sources */,
+				F295D1131CCA92010097C30A /* HIPMessageHandlingExampleWebAppViewController.swift in Sources */,
 				F295D1001CCA91120097C30A /* HIPSimplestExampleWebAppViewController.swift in Sources */,
 				F2311F131CB5853F004F0815 /* AppDelegate.swift in Sources */,
 				F295D0FF1CCA91120097C30A /* HIPSimplestExampleWebApp.swift in Sources */,
