@@ -11,7 +11,9 @@ docs:
 		--github_url https://github.com/Hipmunk/HIPWebApp \
 		--github-file-prefix https://github.com/Hipmunk/HIPWebApp/tree/master \
 		--module HIPWebApp \
+		--module-version 1.0 \
 		--root-url https://hipmunk.github.com/HIPWebApp 
+	cp doc_assets/* docs/
 
 deploy-docs: docs
 	# first, pip install ghp-import

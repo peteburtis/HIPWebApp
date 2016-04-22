@@ -71,6 +71,13 @@ protocols:
 
 See `HIPWebApp/WebApp.swift` and `HIPWebAppDemo/Examples` for details.
 
+## Concepts
+
+Here is a potentially helpful diagram about how the different classes and
+protocols are related.
+
+![class diagram](class_diagram.png)
+
 ## Further reading
 
 * [The official `WKWebView` docs](https://developer.apple.com/library/ios/documentation/WebKit/Reference/WKWebView_Ref/)
