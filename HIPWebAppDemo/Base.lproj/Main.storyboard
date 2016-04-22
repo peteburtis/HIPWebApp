@@ -3,30 +3,31 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--The Google-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="SAS-oU-M6q">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HIPExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YWn-Qi-IlS" customClass="HIPSimplestExampleWebAppViewController" customModule="HIPWebAppDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="nFh-zH-wvy"/>
+                        <viewControllerLayoutGuide type="bottom" id="07x-rb-5xT"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                    <view key="view" contentMode="scaleToFill" id="Z6N-ld-kXJ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="The Google" id="HMQ-vK-Yg3"/>
+                    <navigationItem key="navigationItem" title="The Google" id="OhO-dO-TJQ"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
-                        <outlet property="webViewContainer" destination="8bC-Xf-vdC" id="tsx-o0-Plm"/>
+                        <outlet property="webViewContainer" destination="Z6N-ld-kXJ" id="B5R-AQ-6WQ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mtk-8B-dTe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1392" y="466"/>
+            <point key="canvasLocation" x="2098" y="-93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OGS-LE-KPD">
@@ -39,12 +40,44 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="FMw-FZ-NeE"/>
+                        <segue destination="JCM-4C-Ff7" kind="relationship" relationship="rootViewController" id="DvG-z2-WQI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3v7-F4-dNy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="694" y="466"/>
+        </scene>
+        <!--Examples-->
+        <scene sceneID="frJ-lx-AFt">
+            <objects>
+                <viewController id="JCM-4C-Ff7" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xsu-4X-L51"/>
+                        <viewControllerLayoutGuide type="bottom" id="qly-zE-PrO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="h9u-Wn-IKY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WC4-Yx-dIm">
+                                <rect key="frame" x="20" y="64" width="37" height="30"/>
+                                <state key="normal" title="Basic"/>
+                                <connections>
+                                    <segue destination="YWn-Qi-IlS" kind="show" id="rrM-Ml-3S2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WC4-Yx-dIm" firstAttribute="leading" secondItem="h9u-Wn-IKY" secondAttribute="leadingMargin" id="Fvr-rs-wyC"/>
+                            <constraint firstItem="WC4-Yx-dIm" firstAttribute="top" secondItem="Xsu-4X-L51" secondAttribute="bottom" id="QJD-LB-yHR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Examples" id="r4V-C5-u1R"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DUX-Vf-iWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1339" y="466"/>
         </scene>
     </scenes>
 </document>

@@ -1,5 +1,5 @@
 //
-//  HIPJSUtil.swift
+//  JSUtil.swift
 //  Hipmunk
 //
 //  Created by Steve Johnson on 3/30/16.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct HIPJSUtil {
+struct JSUtil {
     /// Simplest possible way to parse JSON coming from a trusted server
     static func parseJSONObjectWithoutHandlingErrors(s: String) -> NSDictionary? {
         guard let data = s.dataUsingEncoding(NSUTF8StringEncoding) else { return nil }

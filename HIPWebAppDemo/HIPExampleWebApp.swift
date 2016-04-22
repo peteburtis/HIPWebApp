@@ -1,5 +1,5 @@
 //
-//  HIPExampleWebApp.swift
+//  HIPSimplestExampleWebApp.swift
 //  Hipmunk
 //
 //  Created by Steve Johnson on 3/7/16.
@@ -11,7 +11,7 @@ import WebKit
 import HIPWebApp
 
 
-class HIPExampleWebApp: NSObject, HIPWebApp, HIPWebViewReferencing {
+class HIPSimplestExampleWebApp: NSObject, HIPWebApp, HIPWebViewReferencing {
     var appIdentifier: String { return "google" }
     var initialURL: NSURL { return NSURL(string: "https://google.com")! }
 

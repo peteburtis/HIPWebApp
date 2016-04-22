@@ -12,7 +12,7 @@ import WebKit
 extension WKWebView {
     /// Call a JS function inside the web view. All args must be JSON-serializable according to HIPJSUtil.encodeJSON().
     func hip_callJS(functionName: String, _ args: AnyObject...) {
-        guard let functionCallString = HIPJSUtil.createJavaScriptFunctionCall(functionName, args) else {
+        guard let functionCallString = JSUtil.createJavaScriptFunctionCall(functionName, args) else {
             assertionFailure("Can't make a function call out of \(args)")
             return
         }
