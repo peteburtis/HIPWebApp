@@ -61,9 +61,6 @@ public class WebAppViewController: UIViewController, WKScriptMessageHandler {
     /// Subclasses must return a WebApp instance from this method. Unless you're doing something sophisticated, the
     /// WebApp instance should generally not be created until this method is called, since the view may not be visible
     /// yet and we want to minimize memory usage.
-    ///
-    /// It's a method rather than a closure passed to init() because complex uses of WebAppViewController should
-    /// probably be subclassing it anyway.
     public func createWebApp() -> WebApp {
         preconditionFailure("You must subclass WebAppViewController and override this method.")
     }
