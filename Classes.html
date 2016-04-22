@@ -13,7 +13,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">HIPWebApp Docs</a> (100% documented)</p>
+        <p><a href="index.html">HIPWebApp Docs</a> (92% documented)</p>
         <p class="header-right"><a href="https://github.com/Hipmunk/HIPWebApp"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fhipmunk%2Egithub%2Ecom%2Fdocsets%2FHIPWebApp%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -102,14 +102,14 @@ method.</p>
 
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SimplestExampleWebAppViewController</span><span class="p">:</span> <span class="kt">WebAppViewController</span> <span class="p">{</span>
 
-    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WebApp</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">SimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WebApp</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">SimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
 
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// optional:</span>
         <span class="c1">// self.loggingDelegate = myWebAppViewControllerLoggingDelegate</span>
 
         <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
-        <span class="k">self</span><span class="o">.</span><span class="nf">loadURL</span><span class="p">(</span><span class="n">webApp</span><span class="o">!.</span><span class="n">initialURL</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">loadWebAppInitialURL</span><span class="p">()</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -126,7 +126,7 @@ method.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L39-L138">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L39-L147">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

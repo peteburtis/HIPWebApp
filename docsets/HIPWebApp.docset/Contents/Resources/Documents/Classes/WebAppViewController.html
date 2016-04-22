@@ -14,7 +14,7 @@
     <a title="WebAppViewController Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">HIPWebApp Docs</a> (100% documented)</p>
+        <p><a href="../index.html">HIPWebApp Docs</a> (92% documented)</p>
         <p class="header-right"><a href="https://github.com/Hipmunk/HIPWebApp"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Fhipmunk%2Egithub%2Ecom%2Fdocsets%2FHIPWebApp%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -90,14 +90,14 @@ method.</p>
 
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">SimplestExampleWebAppViewController</span><span class="p">:</span> <span class="kt">WebAppViewController</span> <span class="p">{</span>
 
-    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WebApp</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">SimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WebApp</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">SimplestExampleWebApp</span><span class="p">()</span> <span class="p">}</span>
 
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
         <span class="c1">// optional:</span>
         <span class="c1">// self.loggingDelegate = myWebAppViewControllerLoggingDelegate</span>
 
         <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
-        <span class="k">self</span><span class="o">.</span><span class="nf">loadURL</span><span class="p">(</span><span class="n">webApp</span><span class="o">!.</span><span class="n">initialURL</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="nf">loadWebAppInitialURL</span><span class="p">()</span>
     <span class="p">}</span>
 
 <span class="p">}</span>
@@ -200,9 +200,9 @@ method.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9HIPWebApp20WebAppViewController12createWebAppFT_GSqPS_6WebApp__"></a>
+                    <a name="/s:FC9HIPWebApp20WebAppViewController12createWebAppFT_PS_6WebApp_"></a>
                     <a name="//apple_ref/swift/Method/createWebApp()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9HIPWebApp20WebAppViewController12createWebAppFT_GSqPS_6WebApp__">createWebApp()</a>
+                    <a class="token" href="#/s:FC9HIPWebApp20WebAppViewController12createWebAppFT_PS_6WebApp_">createWebApp()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -222,12 +222,12 @@ probably be subclassing it anyway.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WebApp</span><span class="p">?</span> <span class="p">{</span> <span class="nf">assert</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="s">"Must override createWebApp()"</span><span class="p">);</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">createWebApp</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">WebApp</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L67">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L67-L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -245,19 +245,49 @@ probably be subclassing it anyway.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create the views and WebApp</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">override</span> <span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadView</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">WebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L86-L107">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L87-L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9HIPWebApp20WebAppViewController20loadWebAppInitialURLFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/loadWebAppInitialURL()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9HIPWebApp20WebAppViewController20loadWebAppInitialURLFT_T_">loadWebAppInitialURL()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">WebAppViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">WKScriptMessageHandler</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L110-L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +317,7 @@ probably be subclassing it anyway.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L110-L112">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L119-L121">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -317,7 +347,7 @@ probably be subclassing it anyway.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L115-L117">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L124-L126">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -349,7 +379,7 @@ probably be subclassing it anyway.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L120-L137">Show on GitHub</a>
+                        <a href="https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebApp/WebAppViewController.swift#L129-L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
