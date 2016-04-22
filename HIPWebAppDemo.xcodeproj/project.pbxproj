@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2311F131CB5853F004F0815 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311F121CB5853F004F0815 /* AppDelegate.swift */; };
+		F2311F151CB5853F004F0815 /* HIPExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311F141CB5853F004F0815 /* HIPExampleWebAppViewController.swift */; };
+		F2311F181CB5853F004F0815 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2311F161CB5853F004F0815 /* Main.storyboard */; };
+		F2311F1A1CB5853F004F0815 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F2311F191CB5853F004F0815 /* Assets.xcassets */; };
+		F2311F1D1CB5853F004F0815 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F2311F1B1CB5853F004F0815 /* LaunchScreen.storyboard */; };
+		F2311F2C1CB58597004F0815 /* HIPExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311F251CB58597004F0815 /* HIPExampleWebApp.swift */; };
+		F2311F2E1CB58597004F0815 /* HIPWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311F271CB58597004F0815 /* HIPWebApp.swift */; };
+		F2311F2F1CB58597004F0815 /* HIPWebAppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311F281CB58597004F0815 /* HIPWebAppError.swift */; };
+		F2311F311CB58597004F0815 /* HIPWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2311F2A1CB58597004F0815 /* HIPWebAppViewController.swift */; };
+		F23E1E311CB5876A004B8CAF /* HIPJSUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23E1E2F1CB5876A004B8CAF /* HIPJSUtil.swift */; };
+		F23E1E321CB5876A004B8CAF /* WKWebView+HIPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F23E1E301CB5876A004B8CAF /* WKWebView+HIPExtensions.swift */; };
+		F295D09D1CCA8A0E0097C30A /* HIPWebAppLoggingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D09C1CCA8A0E0097C30A /* HIPWebAppLoggingDelegate.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F2311F0F1CB5853F004F0815 /* HIPWebAppDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HIPWebAppDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2311F121CB5853F004F0815 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F2311F141CB5853F004F0815 /* HIPExampleWebAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIPExampleWebAppViewController.swift; sourceTree = "<group>"; };
+		F2311F171CB5853F004F0815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F2311F191CB5853F004F0815 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F2311F1C1CB5853F004F0815 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F2311F1E1CB5853F004F0815 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2311F251CB58597004F0815 /* HIPExampleWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPExampleWebApp.swift; sourceTree = "<group>"; };
+		F2311F271CB58597004F0815 /* HIPWebApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPWebApp.swift; sourceTree = "<group>"; };
+		F2311F281CB58597004F0815 /* HIPWebAppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPWebAppError.swift; sourceTree = "<group>"; };
+		F2311F2A1CB58597004F0815 /* HIPWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPWebAppViewController.swift; sourceTree = "<group>"; };
+		F23E1E2F1CB5876A004B8CAF /* HIPJSUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPJSUtil.swift; sourceTree = "<group>"; };
+		F23E1E301CB5876A004B8CAF /* WKWebView+HIPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "WKWebView+HIPExtensions.swift"; sourceTree = "<group>"; };
+		F295D09C1CCA8A0E0097C30A /* HIPWebAppLoggingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIPWebAppLoggingDelegate.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2311F0C1CB5853F004F0815 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2311F061CB5853F004F0815 = {
+			isa = PBXGroup;
+			children = (
+				F2311F111CB5853F004F0815 /* HIPWebAppDemo */,
+				F2311F101CB5853F004F0815 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2311F101CB5853F004F0815 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2311F0F1CB5853F004F0815 /* HIPWebAppDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2311F111CB5853F004F0815 /* HIPWebAppDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F2DD53D21CB589E90091B213 /* HIPWebApp */,
+				F2DD53D31CB589F10091B213 /* Examples */,
+				F2311F121CB5853F004F0815 /* AppDelegate.swift */,
+				F2311F161CB5853F004F0815 /* Main.storyboard */,
+				F2311F191CB5853F004F0815 /* Assets.xcassets */,
+				F2311F1B1CB5853F004F0815 /* LaunchScreen.storyboard */,
+				F2311F1E1CB5853F004F0815 /* Info.plist */,
+			);
+			path = HIPWebAppDemo;
+			sourceTree = "<group>";
+		};
+		F2DD53D11CB589D80091B213 /* Hipmunk utils */ = {
+			isa = PBXGroup;
+			children = (
+				F23E1E2F1CB5876A004B8CAF /* HIPJSUtil.swift */,
+				F23E1E301CB5876A004B8CAF /* WKWebView+HIPExtensions.swift */,
+			);
+			name = "Hipmunk utils";
+			sourceTree = "<group>";
+		};
+		F2DD53D21CB589E90091B213 /* HIPWebApp */ = {
+			isa = PBXGroup;
+			children = (
+				F2311F271CB58597004F0815 /* HIPWebApp.swift */,
+				F2311F2A1CB58597004F0815 /* HIPWebAppViewController.swift */,
+				F2311F281CB58597004F0815 /* HIPWebAppError.swift */,
+				F295D09C1CCA8A0E0097C30A /* HIPWebAppLoggingDelegate.swift */,
+			);
+			name = HIPWebApp;
+			sourceTree = "<group>";
+		};
+		F2DD53D31CB589F10091B213 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				F2311F141CB5853F004F0815 /* HIPExampleWebAppViewController.swift */,
+				F2311F251CB58597004F0815 /* HIPExampleWebApp.swift */,
+				F2DD53D11CB589D80091B213 /* Hipmunk utils */,
+			);
+			name = Examples;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2311F0E1CB5853F004F0815 /* HIPWebAppDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2311F211CB5853F004F0815 /* Build configuration list for PBXNativeTarget "HIPWebAppDemo" */;
+			buildPhases = (
+				F2311F0B1CB5853F004F0815 /* Sources */,
+				F2311F0C1CB5853F004F0815 /* Frameworks */,
+				F2311F0D1CB5853F004F0815 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HIPWebAppDemo;
+			productName = HIPWebAppDemo;
+			productReference = F2311F0F1CB5853F004F0815 /* HIPWebAppDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2311F071CB5853F004F0815 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Hipmunk, Inc.";
+				TargetAttributes = {
+					F2311F0E1CB5853F004F0815 = {
+						CreatedOnToolsVersion = 7.3;
+					};
+				};
+			};
+			buildConfigurationList = F2311F0A1CB5853F004F0815 /* Build configuration list for PBXProject "HIPWebAppDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F2311F061CB5853F004F0815;
+			productRefGroup = F2311F101CB5853F004F0815 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2311F0E1CB5853F004F0815 /* HIPWebAppDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2311F0D1CB5853F004F0815 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2311F1D1CB5853F004F0815 /* LaunchScreen.storyboard in Resources */,
+				F2311F1A1CB5853F004F0815 /* Assets.xcassets in Resources */,
+				F2311F181CB5853F004F0815 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2311F0B1CB5853F004F0815 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2311F151CB5853F004F0815 /* HIPExampleWebAppViewController.swift in Sources */,
+				F2311F311CB58597004F0815 /* HIPWebAppViewController.swift in Sources */,
+				F23E1E311CB5876A004B8CAF /* HIPJSUtil.swift in Sources */,
+				F295D09D1CCA8A0E0097C30A /* HIPWebAppLoggingDelegate.swift in Sources */,
+				F2311F2C1CB58597004F0815 /* HIPExampleWebApp.swift in Sources */,
+				F2311F2F1CB58597004F0815 /* HIPWebAppError.swift in Sources */,
+				F2311F2E1CB58597004F0815 /* HIPWebApp.swift in Sources */,
+				F2311F131CB5853F004F0815 /* AppDelegate.swift in Sources */,
+				F23E1E321CB5876A004B8CAF /* WKWebView+HIPExtensions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F2311F161CB5853F004F0815 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2311F171CB5853F004F0815 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F2311F1B1CB5853F004F0815 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F2311F1C1CB5853F004F0815 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F2311F1F1CB5853F004F0815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F2311F201CB5853F004F0815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F2311F221CB5853F004F0815 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HIPWebAppDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hipmunk.HIPWebAppDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2311F231CB5853F004F0815 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HIPWebAppDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hipmunk.HIPWebAppDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2311F0A1CB5853F004F0815 /* Build configuration list for PBXProject "HIPWebAppDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2311F1F1CB5853F004F0815 /* Debug */,
+				F2311F201CB5853F004F0815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2311F211CB5853F004F0815 /* Build configuration list for PBXNativeTarget "HIPWebAppDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2311F221CB5853F004F0815 /* Debug */,
+				F2311F231CB5853F004F0815 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2311F071CB5853F004F0815 /* Project object */;
+}
