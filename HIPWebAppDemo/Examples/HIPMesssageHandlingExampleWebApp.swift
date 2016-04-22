@@ -11,12 +11,14 @@ import WebKit
 import HIPWebApp
 
 
+/// Forward any WKWebView messages as delegate methods
 protocol HIPMessageHandlingExampleWebAppDelegate: class {
     func buttonWasClicked(data: AnyObject?)
 }
 
 
 class HIPMessageHandlingExampleWebApp: HIPWebApp {
+    /// Included in log messages
     var appIdentifier: String { return "message-handling" }
 
     var initialURL: NSURL {
@@ -27,13 +29,18 @@ class HIPMessageHandlingExampleWebApp: HIPWebApp {
 
     weak var webView: WKWebView? = nil
     weak var delegate: HIPMessageHandlingExampleWebAppDelegate?
+}
 
+
+//MARK: External API
+extension HIPMessageHandlingExampleWebApp {
     func setButtonColor(cssColorString: String) {
         webView?.evaluateJavaScript("window.containerAPI.changeButtonColor('\(cssColorString)');", completionHandler: nil)
     }
 }
 
 
+//MARK: Grab a reference to the web view
 extension HIPMessageHandlingExampleWebApp: HIPWebAppWebViewReferencing {
     func willRunInWebView(webView: WKWebView) {
         self.webView = webView
@@ -41,6 +48,7 @@ extension HIPMessageHandlingExampleWebApp: HIPWebAppWebViewReferencing {
 }
 
 
+//MARK: Handle WKWebView messages
 extension HIPMessageHandlingExampleWebApp: HIPWebAppMessageHandling {
     var supportedMessageNames: [String] { return ["BUTTON_CLICKED"] }
 

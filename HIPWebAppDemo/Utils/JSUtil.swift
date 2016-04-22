@@ -10,13 +10,6 @@ import Foundation
 
 
 struct JSUtil {
-    /// Simplest possible way to parse JSON coming from a trusted server
-    static func parseJSONObjectWithoutHandlingErrors(s: String) -> NSDictionary? {
-        guard let data = s.dataUsingEncoding(NSUTF8StringEncoding) else { return nil }
-        guard let result = try? NSJSONSerialization.JSONObjectWithData(data, options: []) else { return nil }
-        return result as? NSDictionary
-    }
-
     /// Encode a dictionary, array, or value type (string, number, null) as a JSON string.
     static func encodeJSON(anything: AnyObject) -> String? {
         let options = NSJSONWritingOptions(rawValue: 0)
