@@ -40,7 +40,10 @@ public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
     /// HIPWebApp's classes will be silent in the console unless you set this.
     public weak var loggingDelegate: HIPWebAppLoggingDelegate?
 
+    /// The `WKWebView` instance created by this view controller, if it exists yet
     public var webView: WKWebView?
+
+    /// The `HIPWebApp` instance created by this view controller, if it exists yet
     public var webApp: HIPWebApp?
 
     private var _webAppConfiguring: HIPWebAppConfiguring? { return webApp as? HIPWebAppConfiguring }
@@ -113,6 +116,7 @@ public class HIPWebAppViewController: UIViewController, WKScriptMessageHandler {
         _ = self.view  // loadView is lazy, and that's where we instantiate the web view
     }
 
+    /// WKScriptMessageHandler implementation
     public func userContentController(
         userContentController: WKUserContentController,
         didReceiveScriptMessage message: WKScriptMessage)
