@@ -15,6 +15,16 @@ code and your native code.
 The source code comes with a few examples.
 
 
+## Installation with Carthage
+
+
+Add this line to your `Cartfile`:
+
+```
+github "hipmunk/HIPWebApp" ~> 1.0
+```
+
+
 ## Usage
 
 First, make a class that implements `WebApp`. The only hard requirements are a string
