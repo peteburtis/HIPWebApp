@@ -29,10 +29,20 @@
 		F295D1211CCA9F8F0097C30A /* NavigationDelegateExampleWebApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1201CCA9F8F0097C30A /* NavigationDelegateExampleWebApp.swift */; };
 		F295D1231CCA9F9B0097C30A /* NavigationDelegateExampleWebAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D1221CCA9F9B0097C30A /* NavigationDelegateExampleWebAppViewController.swift */; };
 		F295D1251CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D1241CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html */; };
+		F295D12F1CCEC2870097C30A /* HIPWebAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F295D12E1CCEC2870097C30A /* HIPWebAppTests.swift */; };
+		F295D1311CCEC2870097C30A /* HIPWebApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F295D0D81CCA8CDE0097C30A /* HIPWebApp.framework */; };
+		F295D1381CCEC3800097C30A /* test_web_app.html in Resources */ = {isa = PBXBuildFile; fileRef = F295D1371CCEC3800097C30A /* test_web_app.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		F295D0EB1CCA8CDE0097C30A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F2311F071CB5853F004F0815 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F295D0D71CCA8CDE0097C30A;
+			remoteInfo = HIPWebApp;
+		};
+		F295D1321CCEC2870097C30A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F2311F071CB5853F004F0815 /* Project object */;
 			proxyType = 1;
@@ -81,6 +91,10 @@
 		F295D1221CCA9F9B0097C30A /* NavigationDelegateExampleWebAppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NavigationDelegateExampleWebAppViewController.swift; path = Examples/NavigationDelegateExampleWebAppViewController.swift; sourceTree = "<group>"; };
 		F295D1241CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = NavigationDelegateExampleWebApp.html; path = Examples/NavigationDelegateExampleWebApp.html; sourceTree = "<group>"; };
 		F295D1261CCAA1B80097C30A /* Readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
+		F295D12C1CCEC2870097C30A /* HIPWebAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HIPWebAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F295D12E1CCEC2870097C30A /* HIPWebAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIPWebAppTests.swift; sourceTree = "<group>"; };
+		F295D1301CCEC2870097C30A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F295D1371CCEC3800097C30A /* test_web_app.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test_web_app.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +113,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F295D1291CCEC2870097C30A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F295D1311CCEC2870097C30A /* HIPWebApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -108,6 +130,7 @@
 				F295D1261CCAA1B80097C30A /* Readme.md */,
 				F2311F111CB5853F004F0815 /* HIPWebAppDemo */,
 				F295D0D91CCA8CDE0097C30A /* HIPWebApp */,
+				F295D12D1CCEC2870097C30A /* HIPWebAppTests */,
 				F2311F101CB5853F004F0815 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -117,6 +140,7 @@
 			children = (
 				F2311F0F1CB5853F004F0815 /* HIPWebAppDemo.app */,
 				F295D0D81CCA8CDE0097C30A /* HIPWebApp.framework */,
+				F295D12C1CCEC2870097C30A /* HIPWebAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -183,6 +207,16 @@
 				F295D1241CCA9FA60097C30A /* NavigationDelegateExampleWebApp.html */,
 			);
 			name = "Navigation delegate";
+			sourceTree = "<group>";
+		};
+		F295D12D1CCEC2870097C30A /* HIPWebAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				F295D1371CCEC3800097C30A /* test_web_app.html */,
+				F295D12E1CCEC2870097C30A /* HIPWebAppTests.swift */,
+				F295D1301CCEC2870097C30A /* Info.plist */,
+			);
+			path = HIPWebAppTests;
 			sourceTree = "<group>";
 		};
 		F2DD53D11CB589D80091B213 /* Utils */ = {
@@ -255,6 +289,24 @@
 			productReference = F295D0D81CCA8CDE0097C30A /* HIPWebApp.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		F295D12B1CCEC2870097C30A /* HIPWebAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F295D1341CCEC2870097C30A /* Build configuration list for PBXNativeTarget "HIPWebAppTests" */;
+			buildPhases = (
+				F295D1281CCEC2870097C30A /* Sources */,
+				F295D1291CCEC2870097C30A /* Frameworks */,
+				F295D12A1CCEC2870097C30A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F295D1331CCEC2870097C30A /* PBXTargetDependency */,
+			);
+			name = HIPWebAppTests;
+			productName = HIPWebAppTests;
+			productReference = F295D12C1CCEC2870097C30A /* HIPWebAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -269,6 +321,9 @@
 						CreatedOnToolsVersion = 7.3;
 					};
 					F295D0D71CCA8CDE0097C30A = {
+						CreatedOnToolsVersion = 7.3;
+					};
+					F295D12B1CCEC2870097C30A = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -288,6 +343,7 @@
 			targets = (
 				F2311F0E1CB5853F004F0815 /* HIPWebAppDemo */,
 				F295D0D71CCA8CDE0097C30A /* HIPWebApp */,
+				F295D12B1CCEC2870097C30A /* HIPWebAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -310,6 +366,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F295D12A1CCEC2870097C30A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F295D1381CCEC3800097C30A /* test_web_app.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +408,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F295D1281CCEC2870097C30A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F295D12F1CCEC2870097C30A /* HIPWebAppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -351,6 +423,11 @@
 			isa = PBXTargetDependency;
 			target = F295D0D71CCA8CDE0097C30A /* HIPWebApp */;
 			targetProxy = F295D0EB1CCA8CDE0097C30A /* PBXContainerItemProxy */;
+		};
+		F295D1331CCEC2870097C30A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F295D0D71CCA8CDE0097C30A /* HIPWebApp */;
+			targetProxy = F295D1321CCEC2870097C30A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -525,6 +602,26 @@
 			};
 			name = Release;
 		};
+		F295D1351CCEC2870097C30A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HIPWebAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hipmunk.HIPWebAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F295D1361CCEC2870097C30A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = HIPWebAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hipmunk.HIPWebAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -554,6 +651,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		F295D1341CCEC2870097C30A /* Build configuration list for PBXNativeTarget "HIPWebAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F295D1351CCEC2870097C30A /* Debug */,
+				F295D1361CCEC2870097C30A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
