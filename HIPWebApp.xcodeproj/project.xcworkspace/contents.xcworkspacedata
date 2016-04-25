@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:HIPWebAppDemo.xcodeproj">
+      location = "self:/Users/stevejohnson/dev/HIPWebApp/HIPWebApp.xcodeproj">
    </FileRef>
 </Workspace>

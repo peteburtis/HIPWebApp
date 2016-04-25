@@ -273,7 +273,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F2311F0A1CB5853F004F0815 /* Build configuration list for PBXProject "HIPWebAppDemo" */;
+			buildConfigurationList = F2311F0A1CB5853F004F0815 /* Build configuration list for PBXProject "HIPWebApp" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -528,7 +528,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F2311F0A1CB5853F004F0815 /* Build configuration list for PBXProject "HIPWebAppDemo" */ = {
+		F2311F0A1CB5853F004F0815 /* Build configuration list for PBXProject "HIPWebApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F2311F1F1CB5853F004F0815 /* Debug */,
