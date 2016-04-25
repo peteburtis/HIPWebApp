@@ -4,13 +4,16 @@
 
 [Examples](https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebAppDemo/Examples)
 
-At Hipmunk, we've been experimenting with ways to integrate web-based views into our app without providing a
-bad experience for users. To us, that means tight integration between the code running in the web view and the
-native parts of our app.
+HIPWebApp is a set of protocols and classes for Swift and iOS that removes a
+lot of boilerplate from the process of creating and configuring a `WKWebView`.
+It encourages you to create a dedicated "web app" object whose only job is to
+be the interface between your web code and your native code.
 
-This framework removes a lot of boilerplate from the process of creating and configuring a `WKWebView`, and
-encourages you to create a dedicated "web app" object whose only job is to be the interface between your web
-code and your native code.
+At Hipmunk, we've been experimenting with ways to integrate web-based views
+into our app without providing a bad experience for users. To us, that means
+tight integration between the code running in the web view and the native parts
+of our app. Using this pattern has helped us do that without leaving behind
+a pile of spaghetti code.
 
 The source code comes with a few examples.
 

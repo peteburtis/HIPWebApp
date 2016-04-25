@@ -1,7 +1,8 @@
 .PHONY: docs deploy-docs
 
+# compile the docs using jazzy
 docs:
-	# first, gem install jazzy
+	# prereq: gem install jazzy
 	jazzy \
 		--clean \
 		-x -target,HIPWebApp \
@@ -16,8 +17,9 @@ docs:
 		--root-url https://hipmunk.github.com/HIPWebApp 
 	cp -r doc_assets docs/
 
+# Uploads docs to your origin/gh-pages branch
 deploy-docs: docs
-	# first, pip install ghp-import
+	# prereq: pip install ghp-import
 	ghp-import docs \
 		-n -p \
 		-m "Update docs" \
