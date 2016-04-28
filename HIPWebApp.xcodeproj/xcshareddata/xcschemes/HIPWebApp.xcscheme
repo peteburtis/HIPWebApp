@@ -28,7 +28,26 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "F295D12B1CCEC2870097C30A"
+               BuildableName = "HIPWebAppTests.xctest"
+               BlueprintName = "HIPWebAppTests"
+               ReferencedContainer = "container:HIPWebApp.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "F295D0D71CCA8CDE0097C30A"
+            BuildableName = "HIPWebApp.framework"
+            BlueprintName = "HIPWebApp"
+            ReferencedContainer = "container:HIPWebApp.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
