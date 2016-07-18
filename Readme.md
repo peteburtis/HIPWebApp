@@ -1,5 +1,7 @@
 # HIPWebApp: WKWebView design patterns
 
+![Swift 2.2](https://img.shields.io/badge/Swift-2.2-orange.svg?style=flat)
+
 [Docs (you may already be here)](http://hipmunk.github.io/HIPWebApp/)
 
 [Examples](https://github.com/Hipmunk/HIPWebApp/tree/master/HIPWebAppDemo/Examples)
