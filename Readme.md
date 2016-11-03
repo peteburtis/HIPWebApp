@@ -100,6 +100,14 @@ protocols are related.
 
 ## Release history
 
+### 1.0.2
+
+Made `WebAppViewController.webViewContainer` public
+
+### 1.0.1
+
+Update to Swift 2.3
+
 ### 1.0
 
 Initial release.

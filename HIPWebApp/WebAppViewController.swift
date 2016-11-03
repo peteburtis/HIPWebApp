@@ -52,7 +52,7 @@ public class WebAppViewController: UIViewController, WKScriptMessageHandler {
     private var _webViewMessageHandling: WebAppMessageHandling? { return webApp as? WebAppMessageHandling }
 
     /// The web view will be added as a subview of this, sharing its constraints. Defaults to `self.view`.
-    @IBOutlet private var webViewContainer: UIView?
+    @IBOutlet public var webViewContainer: UIView?
 
     /// WebApp creates the navigation delegate, but we store it here so that every WebApp doesn't have to remember
     /// to do so (it's a weak ref on the web view).
