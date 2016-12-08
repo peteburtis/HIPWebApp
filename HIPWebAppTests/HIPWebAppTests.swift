@@ -13,26 +13,26 @@ import HIPWebApp
 
 /// Web app with a configurable URL and AtDocumentStart user script that remembers what messages it has received
 class TestableWebApp: WebApp, WebAppMessageHandling, WebAppConfiguring, WebAppWebViewReferencing {
-    var onMessageReceived: (((String, AnyObject)) -> Void)?
+    var onMessageReceived: (((String, Any)) -> Void)?
 
     let appIdentifier = "testable-web-app"
-    let initialURL: NSURL
+    let initialURL: URL
     let userScript: String?
 
     var webView: WKWebView?
 
-    init(initialURL: NSURL, userScript: String? = nil) {
+    init(initialURL: URL, userScript: String? = nil) {
         self.initialURL = initialURL
         self.userScript = userScript
     }
 
-    func willRunInWebView(webView: WKWebView) {
+    func willRunInWebView(_ webView: WKWebView) {
         self.webView = webView
     }
 
     var supportedMessageNames: [String] { return ["API_READY"] }
 
-    func handleMessage(name: String, _ body: AnyObject) -> Bool {
+    func handleMessage(_ name: String, _ body: Any) -> Bool {
         onMessageReceived?((name, body))
         return true
     }
@@ -42,7 +42,7 @@ class TestableWebApp: WebApp, WebAppMessageHandling, WebAppConfiguring, WebAppWe
 
         if let userScript = userScript {
             let content = WKUserContentController()
-            let script = WKUserScript(source: userScript, injectionTime: .AtDocumentStart, forMainFrameOnly: true)
+            let script = WKUserScript(source: userScript, injectionTime: .atDocumentStart, forMainFrameOnly: true)
             content.addUserScript(script)
             config.userContentController = content
         }
@@ -53,7 +53,7 @@ class TestableWebApp: WebApp, WebAppMessageHandling, WebAppConfiguring, WebAppWe
 
 
 class HIPBareBonesWebAppViewController: WebAppViewController {
-    private var _createWebApp: (() -> WebApp)! = nil
+    fileprivate var _createWebApp: (() -> WebApp)! = nil
 
     convenience init(createWebApp: (() -> WebApp)) {
         self.init()
@@ -72,23 +72,23 @@ class HIPBareBonesWebAppViewController: WebAppViewController {
 
 
 class HIPWebAppTests: XCTestCase {
-    var bundle: NSBundle! = nil
+    var bundle: Bundle! = nil
 
     override func setUp() {
         super.setUp()
-        bundle = NSBundle(forClass: HIPWebAppTests.self)
+        bundle = Bundle(for: HIPWebAppTests.self)
     }
 
     /// Make sure we can load a page, call some JS on it, and receive a message back
     func testMessages() {
-        let htmlPath = bundle.pathForResource("test_web_app", ofType: "html")!
-        let app = TestableWebApp(initialURL: NSURL(fileURLWithPath: htmlPath), userScript: "window.webkit.messageHandlers.API_READY.postMessage('hello');")
+        let htmlPath = bundle.path(forResource: "test_web_app", ofType: "html")!
+        let app = TestableWebApp(initialURL: URL(fileURLWithPath: htmlPath), userScript: "window.webkit.messageHandlers.API_READY.postMessage('hello');")
 
         let vc = HIPBareBonesWebAppViewController(createWebApp: { app })
         vc.ensureWebViewInstantiated()
         XCTAssertNotNil(app.webView)
 
-        let messageReceivedExpectation = expectationWithDescription("Received API_READY message")
+        let messageReceivedExpectation = expectation(description: "Received API_READY message")
 
         app.onMessageReceived = {
             let expected: (String, String) = ("API_READY", "hello")
@@ -97,6 +97,6 @@ class HIPWebAppTests: XCTestCase {
             messageReceivedExpectation.fulfill()
         }
 
-        waitForExpectationsWithTimeout(1, handler: nil)
+        waitForExpectations(timeout: 1, handler: nil)
     }
 }

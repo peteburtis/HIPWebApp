@@ -12,5 +12,5 @@ import HIPWebApp
 
 class SimplestExampleWebApp: WebApp {
     let appIdentifier = "google"
-    let initialURL = NSURL(string: "https://google.com")!
+    let initialURL = URL(string: "https://google.com")!
 }

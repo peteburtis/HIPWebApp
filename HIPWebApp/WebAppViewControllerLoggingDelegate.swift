@@ -15,11 +15,11 @@ import Foundation
  */
 public protocol WebAppViewControllerLoggingDelegate: class {
     /// Log a debug message.
-    func debug(message: String)
+    func debug(_ message: String)
 
     /// Log a generic message.
-    func info(message: String)
+    func info(_ message: String)
 
     /// Log an error.
-    func error(message: String)
+    func error(_ message: String)
 }

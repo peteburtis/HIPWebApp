@@ -13,7 +13,7 @@ import HIPWebApp
 
 /// Forward any WKWebView messages as delegate methods
 protocol MessageHandlingExampleWebAppDelegate: class {
-    func buttonWasClicked(data: AnyObject?)
+    func buttonWasClicked(data: Any?)
 }
 
 
@@ -21,10 +21,10 @@ class MessageHandlingExampleWebApp: WebApp {
     /// Included in log messages
     var appIdentifier: String { return "message-handling" }
 
-    var initialURL: NSURL {
-        let bundle = NSBundle(forClass: MessageHandlingExampleWebApp.self)
-        let htmlPath = bundle.pathForResource("MessageHandlingExampleWebApp", ofType: "html")!
-        return NSURL(fileURLWithPath: htmlPath)
+    var initialURL: URL {
+        let bundle = Bundle(for: MessageHandlingExampleWebApp.self)
+        let htmlPath = bundle.path(forResource: "MessageHandlingExampleWebApp", ofType: "html")!
+        return URL(fileURLWithPath: htmlPath)
     }
 
     weak var webView: WKWebView? = nil
@@ -42,7 +42,7 @@ extension MessageHandlingExampleWebApp {
 
 //MARK: Grab a reference to the web view
 extension MessageHandlingExampleWebApp: WebAppWebViewReferencing {
-    func willRunInWebView(webView: WKWebView) {
+    func willRunInWebView(_ webView: WKWebView) {
         self.webView = webView
     }
 }
@@ -50,11 +50,13 @@ extension MessageHandlingExampleWebApp: WebAppWebViewReferencing {
 
 //MARK: Handle WKWebView messages
 extension MessageHandlingExampleWebApp: WebAppMessageHandling {
+
     var supportedMessageNames: [String] { return ["BUTTON_CLICKED"] }
 
-    func handleMessage(name: String, _ body: AnyObject) -> Bool {
+    /// The web page has called messageHandlers[name].postMessage(body)
+    public func handleMessage(_ name: String, _ body: Any?) -> Bool {
         switch name {
-        case "BUTTON_CLICKED": delegate?.buttonWasClicked(body)
+        case "BUTTON_CLICKED": delegate?.buttonWasClicked(data: body)
         default: return false
         }
         return true

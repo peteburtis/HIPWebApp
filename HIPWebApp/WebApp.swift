@@ -36,7 +36,7 @@ import WebKit
  */
 public protocol WebApp {
     /// Endpoint where this web app can be reached
-    var initialURL: NSURL { get }
+    var initialURL: URL { get }
 
     /// Programmer-readable debug identifier for this web app
     var appIdentifier: String { get }
@@ -61,7 +61,7 @@ public protocol WebAppNavigating {
 public protocol WebAppWebViewReferencing {
     /// Perform any configuration not covered by the other protocol methods
     /// and/or grab a reference to the web view if you want it
-    func willRunInWebView(webView: WKWebView) -> ()
+    func willRunInWebView(_ webView: WKWebView) -> ()
 }
 
 
@@ -72,5 +72,5 @@ public protocol WebAppMessageHandling {
     var supportedMessageNames: [String] { get }
 
     /// The web page has called messageHandlers[name].postMessage(body)
-    func handleMessage(name: String, _ body: AnyObject) -> Bool
+    func handleMessage(_ name: String, _ body: Any?) -> Bool
 }

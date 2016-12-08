@@ -11,15 +11,15 @@ import HIPWebApp
 
 
 class BasicLogging: WebAppViewControllerLoggingDelegate {
-    func debug(message: String) {
+    func debug(_ message: String) {
         print("DEBUG: \(message)")
     }
 
-    func info(message: String) {
+    func info(_ message: String) {
         print("INFO: \(message)")
     }
 
-    func error(message: String) {
+    func error(_ message: String) {
         print("ERROR: \(message)")
     }
 }

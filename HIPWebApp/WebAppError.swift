@@ -10,7 +10,7 @@ import Foundation
 
 
 /// All errors that can be thrown by `WebAppViewController` subclasses and `WebApp` implementations
-public enum WebAppError: ErrorType {
+public enum WebAppError: Error {
     /// Your `handleMessage(_:_:)` implementation may throw this if it can't parse a message body.
-    case MessageParseError
+    case messageParseError
 }
