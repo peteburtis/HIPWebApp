@@ -14,10 +14,10 @@ import HIPWebApp
 class UserScriptExampleWebApp: WebApp {
     var appIdentifier: String { return "user-script" }
 
-    var initialURL: NSURL {
-        let bundle = NSBundle(forClass: UserScriptExampleWebApp.self)
-        let htmlPath = bundle.pathForResource("UserScriptExampleWebApp", ofType: "html")!
-        return NSURL(fileURLWithPath: htmlPath)
+    var initialURL: URL {
+        let bundle = Bundle(for: UserScriptExampleWebApp.self)
+        let htmlPath = bundle.path(forResource: "UserScriptExampleWebApp", ofType: "html")!
+        return URL(fileURLWithPath: htmlPath)
     }
 }
 
@@ -31,7 +31,7 @@ extension UserScriptExampleWebApp: WebAppConfiguring {
         )
 
         let content = WKUserContentController()
-        let script = WKUserScript(source: userScript, injectionTime: .AtDocumentEnd, forMainFrameOnly: true)
+        let script = WKUserScript(source: userScript, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
         content.addUserScript(script)
         config.userContentController = content
 

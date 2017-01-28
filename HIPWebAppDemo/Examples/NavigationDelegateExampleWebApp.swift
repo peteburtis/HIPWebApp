@@ -10,14 +10,13 @@ import Foundation
 import WebKit
 import HIPWebApp
 
-
 class NavigationDelegateExampleWebApp: NSObject, WebApp {  // WKNavigationDelegate requires NSObject
     var appIdentifier: String { return "navigation-delegate" }
 
-    var initialURL: NSURL {
-        let bundle = NSBundle(forClass: NavigationDelegateExampleWebApp.self)
-        let htmlPath = bundle.pathForResource("NavigationDelegateExampleWebApp", ofType: "html")!
-        return NSURL(fileURLWithPath: htmlPath)
+    var initialURL: URL {
+        let bundle = Bundle(for: NavigationDelegateExampleWebApp.self)
+        let htmlPath = bundle.path(forResource: "NavigationDelegateExampleWebApp", ofType: "html")!
+        return URL(fileURLWithPath: htmlPath)
     }
 }
 
@@ -29,12 +28,15 @@ extension NavigationDelegateExampleWebApp: WebAppNavigating {
 }
 
 extension NavigationDelegateExampleWebApp: WKNavigationDelegate {
-    func webView(webView: WKWebView, decidePolicyForNavigationAction navigationAction: WKNavigationAction, decisionHandler: (WKNavigationActionPolicy) -> Void) {
-        if navigationAction.request.URL?.host?.containsString("slashdot") == true {
-            NSLog("No slashdot for you!")
-            decisionHandler(.Cancel)
+
+
+
+    func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void){
+        if navigationAction.request.url?.host?.contains("slashdot") == true {
+            print("No slashdot for you!")
+            decisionHandler(.cancel)
         } else {
-            decisionHandler(.Allow)
+            decisionHandler(.allow)
         }
     }
 }

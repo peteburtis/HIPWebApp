@@ -13,7 +13,7 @@ import HIPWebApp
 class MessageHandlingExampleWebAppViewController: WebAppViewController, MessageHandlingExampleWebAppDelegate {
 
     /// Convenience cast to expected web app class
-    private var _messageHandlingWebApp: MessageHandlingExampleWebApp? { return webApp as? MessageHandlingExampleWebApp }
+    fileprivate var _messageHandlingWebApp: MessageHandlingExampleWebApp? { return webApp as? MessageHandlingExampleWebApp }
 
     override func createWebApp() -> WebApp {
         let webApp = MessageHandlingExampleWebApp()
@@ -30,7 +30,7 @@ class MessageHandlingExampleWebAppViewController: WebAppViewController, MessageH
     }
 
     /// Delegate method implementation
-    func buttonWasClicked(data: AnyObject?) {
+    func buttonWasClicked(data: Any?) {
         NSLog("FIRE ZE MISSILES!!! Data: \(data)")
     }
 }
@@ -38,15 +38,15 @@ class MessageHandlingExampleWebAppViewController: WebAppViewController, MessageH
 
 //MARK: Actions
 extension MessageHandlingExampleWebAppViewController {
-    @IBAction func redAction(sender: AnyObject? = nil) {
-        _messageHandlingWebApp?.setButtonColor("red")
+    @IBAction func redAction(sender: Any? = nil) {
+        _messageHandlingWebApp?.setButtonColor(cssColorString: "red")
     }
 
-    @IBAction func greenAction(sender: AnyObject? = nil) {
-        _messageHandlingWebApp?.setButtonColor("green")
+    @IBAction func greenAction(sender: Any? = nil) {
+        _messageHandlingWebApp?.setButtonColor(cssColorString: "green")
     }
 
-    @IBAction func blueAction(sender: AnyObject? = nil) {
-        _messageHandlingWebApp?.setButtonColor("blue")
+    @IBAction func blueAction(sender: Any? = nil) {
+        _messageHandlingWebApp?.setButtonColor(cssColorString: "blue")
     }
 }
